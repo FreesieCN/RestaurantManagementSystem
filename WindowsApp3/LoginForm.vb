@@ -36,7 +36,7 @@
                 lb_ErrorInfo_2.Visible = True
             Case 3
                 MessageBox.Show("登录成功")
-                Me.Close()
+                Me.Hide()
                 MenuForm.Show()
         End Select
     End Sub
@@ -84,4 +84,5 @@
             Login()
         End If
     End Sub
+
 End Class
