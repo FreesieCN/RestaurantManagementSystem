@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class lb_LoginForm
+Partial Class LoginForm
     Inherits System.Windows.Forms.Form
 
     'Form 重写 Dispose，以清理组件列表。
@@ -23,11 +23,7 @@ Partial Class lb_LoginForm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(lb_LoginForm))
-        Me.RMS_DataSet = New WindowsApp3.RMS_DataSet()
-        Me.管理员信息BindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.管理员信息TableAdapter = New WindowsApp3.RMS_DataSetTableAdapters.管理员信息TableAdapter()
-        Me.TableAdapterManager = New WindowsApp3.RMS_DataSetTableAdapters.TableAdapterManager()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LoginForm))
         Me.bt_Login = New System.Windows.Forms.Button()
         Me.Title = New System.Windows.Forms.Label()
         Me.UserName = New System.Windows.Forms.Label()
@@ -38,33 +34,13 @@ Partial Class lb_LoginForm
         Me.lb_ErrorInfo_0 = New System.Windows.Forms.Label()
         Me.lb_ErrorInfo_1 = New System.Windows.Forms.Label()
         Me.lb_ErrorInfo_2 = New System.Windows.Forms.Label()
+        Me.RMS_DataSet = New WindowsApp3.RMS_DataSet()
+        Me.管理员信息BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.管理员信息TableAdapter = New WindowsApp3.RMS_DataSetTableAdapters.管理员信息TableAdapter()
+        Me.TableAdapterManager = New WindowsApp3.RMS_DataSetTableAdapters.TableAdapterManager()
         CType(Me.RMS_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.管理员信息BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'RMS_DataSet
-        '
-        Me.RMS_DataSet.DataSetName = "RMS_DataSet"
-        Me.RMS_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        '管理员信息BindingSource
-        '
-        Me.管理员信息BindingSource.DataMember = "管理员信息"
-        Me.管理员信息BindingSource.DataSource = Me.RMS_DataSet
-        '
-        '管理员信息TableAdapter
-        '
-        Me.管理员信息TableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager._2024_08_17订单TableAdapter = Nothing
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.UpdateOrder = WindowsApp3.RMS_DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        Me.TableAdapterManager.会员信息TableAdapter = Nothing
-        Me.TableAdapterManager.管理员信息TableAdapter = Me.管理员信息TableAdapter
-        Me.TableAdapterManager.菜单信息TableAdapter = Nothing
-        Me.TableAdapterManager.雇员信息TableAdapter = Nothing
         '
         'bt_Login
         '
@@ -124,7 +100,31 @@ Partial Class lb_LoginForm
         Me.lb_ErrorInfo_2.ForeColor = System.Drawing.Color.Red
         Me.lb_ErrorInfo_2.Name = "lb_ErrorInfo_2"
         '
-        'lb_LoginForm
+        'RMS_DataSet
+        '
+        Me.RMS_DataSet.DataSetName = "RMS_DataSet"
+        Me.RMS_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        '管理员信息BindingSource
+        '
+        Me.管理员信息BindingSource.DataMember = "管理员信息"
+        Me.管理员信息BindingSource.DataSource = Me.RMS_DataSet
+        '
+        '管理员信息TableAdapter
+        '
+        Me.管理员信息TableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager._2024_08_17订单TableAdapter = Nothing
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.UpdateOrder = WindowsApp3.RMS_DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.会员信息TableAdapter = Nothing
+        Me.TableAdapterManager.管理员信息TableAdapter = Me.管理员信息TableAdapter
+        Me.TableAdapterManager.菜单信息TableAdapter = Nothing
+        Me.TableAdapterManager.雇员信息TableAdapter = Nothing
+        '
+        'LoginForm
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -139,10 +139,10 @@ Partial Class lb_LoginForm
         Me.Controls.Add(Me.Title)
         Me.Controls.Add(Me.bt_Login)
         Me.Controls.Add(Me.lb_ErrorInfo_2)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "lb_LoginForm"
+        Me.Name = "LoginForm"
         CType(Me.RMS_DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.管理员信息BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
