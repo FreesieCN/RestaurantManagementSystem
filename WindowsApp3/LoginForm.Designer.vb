@@ -46,7 +46,7 @@ Partial Class LoginForm
         Me.bt_Login.BackColor = System.Drawing.SystemColors.ControlLight
         Me.bt_Login.Font = New System.Drawing.Font("宋体", 12.0!)
         Me.bt_Login.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.bt_Login.Location = New System.Drawing.Point(40, 183)
+        Me.bt_Login.Location = New System.Drawing.Point(22, 141)
         Me.bt_Login.Name = "bt_Login"
         Me.bt_Login.Size = New System.Drawing.Size(111, 30)
         Me.bt_Login.TabIndex = 2
@@ -55,15 +55,15 @@ Partial Class LoginForm
         '
         'Title
         '
-        Me.Title.AutoSize = True
         Me.Title.BackColor = System.Drawing.SystemColors.InactiveCaption
+        Me.Title.Dock = System.Windows.Forms.DockStyle.Top
         Me.Title.Font = New System.Drawing.Font("黑体", 24.0!, System.Drawing.FontStyle.Bold)
         Me.Title.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Title.Location = New System.Drawing.Point(17, 20)
+        Me.Title.Location = New System.Drawing.Point(0, 0)
         Me.Title.Name = "Title"
-        Me.Title.Size = New System.Drawing.Size(345, 33)
+        Me.Title.Size = New System.Drawing.Size(334, 48)
         Me.Title.TabIndex = 1
-        Me.Title.Text = "欢迎使用餐饮管理系统"
+        Me.Title.Text = "登录界面"
         Me.Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'UserName
@@ -71,7 +71,7 @@ Partial Class LoginForm
         Me.UserName.AutoSize = True
         Me.UserName.Font = New System.Drawing.Font("宋体", 12.0!)
         Me.UserName.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.UserName.Location = New System.Drawing.Point(37, 93)
+        Me.UserName.Location = New System.Drawing.Point(19, 51)
         Me.UserName.Name = "UserName"
         Me.UserName.Size = New System.Drawing.Size(71, 16)
         Me.UserName.TabIndex = 2
@@ -82,7 +82,7 @@ Partial Class LoginForm
         Me.lb_PWD.AutoSize = True
         Me.lb_PWD.Font = New System.Drawing.Font("宋体", 12.0!)
         Me.lb_PWD.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.lb_PWD.Location = New System.Drawing.Point(37, 137)
+        Me.lb_PWD.Location = New System.Drawing.Point(19, 95)
         Me.lb_PWD.Name = "lb_PWD"
         Me.lb_PWD.Size = New System.Drawing.Size(71, 16)
         Me.lb_PWD.TabIndex = 3
@@ -93,7 +93,7 @@ Partial Class LoginForm
         Me.bt_Quit.BackColor = System.Drawing.SystemColors.ControlLight
         Me.bt_Quit.Font = New System.Drawing.Font("宋体", 12.0!)
         Me.bt_Quit.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.bt_Quit.Location = New System.Drawing.Point(218, 183)
+        Me.bt_Quit.Location = New System.Drawing.Point(200, 141)
         Me.bt_Quit.Name = "bt_Quit"
         Me.bt_Quit.Size = New System.Drawing.Size(111, 30)
         Me.bt_Quit.TabIndex = 3
@@ -102,14 +102,14 @@ Partial Class LoginForm
         '
         'tb_UserName
         '
-        Me.tb_UserName.Location = New System.Drawing.Point(115, 93)
+        Me.tb_UserName.Location = New System.Drawing.Point(97, 51)
         Me.tb_UserName.Name = "tb_UserName"
         Me.tb_UserName.Size = New System.Drawing.Size(214, 21)
         Me.tb_UserName.TabIndex = 0
         '
         'tb_PWD
         '
-        Me.tb_PWD.Location = New System.Drawing.Point(115, 137)
+        Me.tb_PWD.Location = New System.Drawing.Point(97, 95)
         Me.tb_PWD.Name = "tb_PWD"
         Me.tb_PWD.Size = New System.Drawing.Size(214, 21)
         Me.tb_PWD.TabIndex = 1
@@ -120,7 +120,7 @@ Partial Class LoginForm
         Me.lb_ErrorInfo_0.Font = New System.Drawing.Font("宋体", 10.0!)
         Me.lb_ErrorInfo_0.ForeColor = System.Drawing.Color.Red
         Me.lb_ErrorInfo_0.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.lb_ErrorInfo_0.Location = New System.Drawing.Point(112, 117)
+        Me.lb_ErrorInfo_0.Location = New System.Drawing.Point(94, 75)
         Me.lb_ErrorInfo_0.Name = "lb_ErrorInfo_0"
         Me.lb_ErrorInfo_0.Size = New System.Drawing.Size(91, 14)
         Me.lb_ErrorInfo_0.TabIndex = 7
@@ -133,7 +133,7 @@ Partial Class LoginForm
         Me.lb_ErrorInfo_1.Font = New System.Drawing.Font("宋体", 10.0!)
         Me.lb_ErrorInfo_1.ForeColor = System.Drawing.Color.Red
         Me.lb_ErrorInfo_1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.lb_ErrorInfo_1.Location = New System.Drawing.Point(112, 161)
+        Me.lb_ErrorInfo_1.Location = New System.Drawing.Point(94, 119)
         Me.lb_ErrorInfo_1.Name = "lb_ErrorInfo_1"
         Me.lb_ErrorInfo_1.Size = New System.Drawing.Size(77, 14)
         Me.lb_ErrorInfo_1.TabIndex = 8
@@ -146,7 +146,7 @@ Partial Class LoginForm
         Me.lb_ErrorInfo_2.Font = New System.Drawing.Font("宋体", 10.0!)
         Me.lb_ErrorInfo_2.ForeColor = System.Drawing.Color.Red
         Me.lb_ErrorInfo_2.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.lb_ErrorInfo_2.Location = New System.Drawing.Point(112, 117)
+        Me.lb_ErrorInfo_2.Location = New System.Drawing.Point(94, 75)
         Me.lb_ErrorInfo_2.Name = "lb_ErrorInfo_2"
         Me.lb_ErrorInfo_2.Size = New System.Drawing.Size(203, 14)
         Me.lb_ErrorInfo_2.TabIndex = 9
@@ -183,7 +183,7 @@ Partial Class LoginForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
         Me.BackColor = System.Drawing.SystemColors.InactiveCaption
-        Me.ClientSize = New System.Drawing.Size(374, 225)
+        Me.ClientSize = New System.Drawing.Size(334, 191)
         Me.Controls.Add(Me.lb_ErrorInfo_1)
         Me.Controls.Add(Me.lb_ErrorInfo_0)
         Me.Controls.Add(Me.tb_PWD)
