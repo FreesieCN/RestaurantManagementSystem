@@ -1,4 +1,5 @@
 ﻿Public Class LoginForm
+    '定义错误信息枚举
     Enum enum_LoginErrorInfo
         UserNameEmpty = 0
         PWDEmpty = 1
@@ -20,6 +21,7 @@
             End
         End If
     End Sub
+    '登录函数，接受错误信息枚举
     Sub LoginFuc(ByVal info As enum_LoginErrorInfo)
         lb_ErrorInfo_0.Visible = False
         lb_ErrorInfo_1.Visible = False
@@ -39,6 +41,11 @@
     End Sub
 
     Private Sub bt_Login_Click(sender As Object, e As EventArgs) Handles bt_Login.Click
+        Login()
+    End Sub
+
+    '登录函数,用于不同事件共享方法
+    Private Sub Login()
         Dim enum_ErrorInfo As enum_LoginErrorInfo
         If tb_UserName.Text = "" Then
             enum_ErrorInfo = enum_LoginErrorInfo.UserNameEmpty
@@ -53,6 +60,25 @@
             End If
         End If
         LoginFuc(enum_ErrorInfo)
+    End Sub
 
+    Private Sub tb_UserName_Enter(sender As Object, e As EventArgs) Handles tb_UserName.Enter, tb_PWD.Enter
+        lb_ErrorInfo_0.Visible = False
+        lb_ErrorInfo_1.Visible = False
+        lb_ErrorInfo_2.Visible = False
+    End Sub
+    '回车进入密码框
+    Private Sub tb_UserName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tb_UserName.KeyPress
+        If e.KeyChar = Microsoft.VisualBasic.ChrW(13) Then
+            tb_PWD.Focus()
+            e.Handled = True
+        End If
+    End Sub
+    '回车登录
+    Private Sub tb_PWD_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tb_PWD.KeyPress
+        If e.KeyChar = Microsoft.VisualBasic.ChrW(13) Then
+            e.Handled = True
+            Login()
+        End If
     End Sub
 End Class
