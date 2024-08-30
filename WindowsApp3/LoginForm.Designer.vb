@@ -23,14 +23,13 @@ Partial Class LoginForm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LoginForm))
         Me.bt_Login = New System.Windows.Forms.Button()
         Me.Title = New System.Windows.Forms.Label()
         Me.UserName = New System.Windows.Forms.Label()
         Me.lb_PWD = New System.Windows.Forms.Label()
         Me.bt_Quit = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.tb_UserName = New System.Windows.Forms.TextBox()
+        Me.tb_PWD = New System.Windows.Forms.TextBox()
         Me.lb_ErrorInfo_0 = New System.Windows.Forms.Label()
         Me.lb_ErrorInfo_1 = New System.Windows.Forms.Label()
         Me.lb_ErrorInfo_2 = New System.Windows.Forms.Label()
@@ -45,60 +44,114 @@ Partial Class LoginForm
         'bt_Login
         '
         Me.bt_Login.BackColor = System.Drawing.SystemColors.ControlLight
-        resources.ApplyResources(Me.bt_Login, "bt_Login")
+        Me.bt_Login.Font = New System.Drawing.Font("宋体", 12.0!)
+        Me.bt_Login.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.bt_Login.Location = New System.Drawing.Point(40, 183)
         Me.bt_Login.Name = "bt_Login"
+        Me.bt_Login.Size = New System.Drawing.Size(111, 30)
+        Me.bt_Login.TabIndex = 2
+        Me.bt_Login.Text = "登录"
         Me.bt_Login.UseVisualStyleBackColor = False
         '
         'Title
         '
-        resources.ApplyResources(Me.Title, "Title")
+        Me.Title.AutoSize = True
         Me.Title.BackColor = System.Drawing.SystemColors.InactiveCaption
+        Me.Title.Font = New System.Drawing.Font("黑体", 24.0!, System.Drawing.FontStyle.Bold)
+        Me.Title.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Title.Location = New System.Drawing.Point(17, 20)
         Me.Title.Name = "Title"
+        Me.Title.Size = New System.Drawing.Size(345, 33)
+        Me.Title.TabIndex = 1
+        Me.Title.Text = "欢迎使用餐饮管理系统"
+        Me.Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'UserName
         '
-        resources.ApplyResources(Me.UserName, "UserName")
+        Me.UserName.AutoSize = True
+        Me.UserName.Font = New System.Drawing.Font("宋体", 12.0!)
+        Me.UserName.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.UserName.Location = New System.Drawing.Point(37, 93)
         Me.UserName.Name = "UserName"
+        Me.UserName.Size = New System.Drawing.Size(71, 16)
+        Me.UserName.TabIndex = 2
+        Me.UserName.Text = "用户名："
         '
         'lb_PWD
         '
-        resources.ApplyResources(Me.lb_PWD, "lb_PWD")
+        Me.lb_PWD.AutoSize = True
+        Me.lb_PWD.Font = New System.Drawing.Font("宋体", 12.0!)
+        Me.lb_PWD.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.lb_PWD.Location = New System.Drawing.Point(37, 137)
         Me.lb_PWD.Name = "lb_PWD"
+        Me.lb_PWD.Size = New System.Drawing.Size(71, 16)
+        Me.lb_PWD.TabIndex = 3
+        Me.lb_PWD.Text = "密  码："
         '
         'bt_Quit
         '
         Me.bt_Quit.BackColor = System.Drawing.SystemColors.ControlLight
-        resources.ApplyResources(Me.bt_Quit, "bt_Quit")
+        Me.bt_Quit.Font = New System.Drawing.Font("宋体", 12.0!)
+        Me.bt_Quit.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.bt_Quit.Location = New System.Drawing.Point(218, 183)
         Me.bt_Quit.Name = "bt_Quit"
+        Me.bt_Quit.Size = New System.Drawing.Size(111, 30)
+        Me.bt_Quit.TabIndex = 3
+        Me.bt_Quit.Text = "退出"
         Me.bt_Quit.UseVisualStyleBackColor = False
         '
-        'TextBox1
+        'tb_UserName
         '
-        resources.ApplyResources(Me.TextBox1, "TextBox1")
-        Me.TextBox1.Name = "TextBox1"
+        Me.tb_UserName.Location = New System.Drawing.Point(115, 93)
+        Me.tb_UserName.Name = "tb_UserName"
+        Me.tb_UserName.Size = New System.Drawing.Size(214, 21)
+        Me.tb_UserName.TabIndex = 0
         '
-        'TextBox2
+        'tb_PWD
         '
-        resources.ApplyResources(Me.TextBox2, "TextBox2")
-        Me.TextBox2.Name = "TextBox2"
+        Me.tb_PWD.Location = New System.Drawing.Point(115, 137)
+        Me.tb_PWD.Name = "tb_PWD"
+        Me.tb_PWD.Size = New System.Drawing.Size(214, 21)
+        Me.tb_PWD.TabIndex = 1
         '
         'lb_ErrorInfo_0
         '
-        resources.ApplyResources(Me.lb_ErrorInfo_0, "lb_ErrorInfo_0")
+        Me.lb_ErrorInfo_0.AutoSize = True
+        Me.lb_ErrorInfo_0.Font = New System.Drawing.Font("宋体", 10.0!)
         Me.lb_ErrorInfo_0.ForeColor = System.Drawing.Color.Red
+        Me.lb_ErrorInfo_0.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.lb_ErrorInfo_0.Location = New System.Drawing.Point(112, 117)
         Me.lb_ErrorInfo_0.Name = "lb_ErrorInfo_0"
+        Me.lb_ErrorInfo_0.Size = New System.Drawing.Size(91, 14)
+        Me.lb_ErrorInfo_0.TabIndex = 7
+        Me.lb_ErrorInfo_0.Text = "未输入用户名"
+        Me.lb_ErrorInfo_0.Visible = False
         '
         'lb_ErrorInfo_1
         '
-        resources.ApplyResources(Me.lb_ErrorInfo_1, "lb_ErrorInfo_1")
+        Me.lb_ErrorInfo_1.AutoSize = True
+        Me.lb_ErrorInfo_1.Font = New System.Drawing.Font("宋体", 10.0!)
         Me.lb_ErrorInfo_1.ForeColor = System.Drawing.Color.Red
+        Me.lb_ErrorInfo_1.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.lb_ErrorInfo_1.Location = New System.Drawing.Point(112, 161)
         Me.lb_ErrorInfo_1.Name = "lb_ErrorInfo_1"
+        Me.lb_ErrorInfo_1.Size = New System.Drawing.Size(77, 14)
+        Me.lb_ErrorInfo_1.TabIndex = 8
+        Me.lb_ErrorInfo_1.Text = "未输入密码"
+        Me.lb_ErrorInfo_1.Visible = False
         '
         'lb_ErrorInfo_2
         '
-        resources.ApplyResources(Me.lb_ErrorInfo_2, "lb_ErrorInfo_2")
+        Me.lb_ErrorInfo_2.AutoSize = True
+        Me.lb_ErrorInfo_2.Font = New System.Drawing.Font("宋体", 10.0!)
         Me.lb_ErrorInfo_2.ForeColor = System.Drawing.Color.Red
+        Me.lb_ErrorInfo_2.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.lb_ErrorInfo_2.Location = New System.Drawing.Point(112, 117)
         Me.lb_ErrorInfo_2.Name = "lb_ErrorInfo_2"
+        Me.lb_ErrorInfo_2.Size = New System.Drawing.Size(203, 14)
+        Me.lb_ErrorInfo_2.TabIndex = 9
+        Me.lb_ErrorInfo_2.Text = "用户名或密码错误，请重新输入"
+        Me.lb_ErrorInfo_2.Visible = False
         '
         'RMS_DataSet
         '
@@ -126,13 +179,15 @@ Partial Class LoginForm
         '
         'LoginForm
         '
-        resources.ApplyResources(Me, "$this")
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSize = True
         Me.BackColor = System.Drawing.SystemColors.InactiveCaption
+        Me.ClientSize = New System.Drawing.Size(374, 225)
         Me.Controls.Add(Me.lb_ErrorInfo_1)
         Me.Controls.Add(Me.lb_ErrorInfo_0)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.tb_PWD)
+        Me.Controls.Add(Me.tb_UserName)
         Me.Controls.Add(Me.bt_Quit)
         Me.Controls.Add(Me.lb_PWD)
         Me.Controls.Add(Me.UserName)
@@ -143,6 +198,8 @@ Partial Class LoginForm
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "LoginForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "登录界面"
         CType(Me.RMS_DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.管理员信息BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -159,8 +216,8 @@ Partial Class LoginForm
     Friend WithEvents UserName As Label
     Friend WithEvents lb_PWD As Label
     Friend WithEvents bt_Quit As Button
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents tb_UserName As TextBox
+    Friend WithEvents tb_PWD As TextBox
     Friend WithEvents lb_ErrorInfo_0 As Label
     Friend WithEvents lb_ErrorInfo_1 As Label
     Friend WithEvents lb_ErrorInfo_2 As Label
