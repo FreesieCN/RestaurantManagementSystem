@@ -169,7 +169,6 @@ Partial Class LoginForm
         '
         'TableAdapterManager
         '
-        Me.TableAdapterManager._2024_08_17订单TableAdapter = Nothing
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.UpdateOrder = WindowsApp3.RMS_DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.会员信息TableAdapter = Nothing
