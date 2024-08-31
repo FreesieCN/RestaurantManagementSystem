@@ -1,0 +1,7 @@
+﻿Partial Class RMS_DataSet
+End Class
+
+Namespace RMS_DataSetTableAdapters
+    Partial Public Class 菜单信息TableAdapter
+    End Class
+End Namespace

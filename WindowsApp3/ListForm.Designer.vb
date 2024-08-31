@@ -23,24 +23,15 @@ Partial Class ListForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.RMS_DataSet = New WindowsApp3.RMS_DataSet()
-        Me.菜单信息BindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.菜单信息TableAdapter = New WindowsApp3.RMS_DataSetTableAdapters.菜单信息TableAdapter()
-        Me.TableAdapterManager = New WindowsApp3.RMS_DataSetTableAdapters.TableAdapterManager()
         Me.菜单信息DataGridView = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.bt_Quit = New System.Windows.Forms.Button()
         Me.bt_Add = New System.Windows.Forms.Button()
         Me.bt_Search = New System.Windows.Forms.Button()
         Me.bt_Delete = New System.Windows.Forms.Button()
         Me.bt_Edit = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.tb_Number = New System.Windows.Forms.TextBox()
+        Me.tb_Name = New System.Windows.Forms.TextBox()
+        Me.tb_Price = New System.Windows.Forms.TextBox()
         Me.rb_isGiven = New System.Windows.Forms.RadioButton()
         Me.rb_isnotGiven = New System.Windows.Forms.RadioButton()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -48,84 +39,56 @@ Partial Class ListForm
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Title = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.lb_Num = New System.Windows.Forms.Label()
+        Me.lb_ErrorInfo = New System.Windows.Forms.Label()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.菜单信息BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.RMS_DataSet = New WindowsApp3.RMS_DataSet()
+        Me.菜单信息TableAdapter = New WindowsApp3.RMS_DataSetTableAdapters.菜单信息TableAdapter()
+        Me.TableAdapterManager = New WindowsApp3.RMS_DataSetTableAdapters.TableAdapterManager()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        CType(Me.RMS_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.菜单信息BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton3 = New System.Windows.Forms.RadioButton()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         CType(Me.菜单信息DataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.菜单信息BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RMS_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'RMS_DataSet
-        '
-        Me.RMS_DataSet.DataSetName = "RMS_DataSet"
-        Me.RMS_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        '菜单信息BindingSource
-        '
-        Me.菜单信息BindingSource.DataMember = "菜单信息"
-        Me.菜单信息BindingSource.DataSource = Me.RMS_DataSet
-        '
-        '菜单信息TableAdapter
-        '
-        Me.菜单信息TableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.UpdateOrder = WindowsApp3.RMS_DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        Me.TableAdapterManager.会员信息TableAdapter = Nothing
-        Me.TableAdapterManager.管理员信息TableAdapter = Nothing
-        Me.TableAdapterManager.菜单信息TableAdapter = Me.菜单信息TableAdapter
-        Me.TableAdapterManager.雇员信息TableAdapter = Nothing
         '
         '菜单信息DataGridView
         '
+        Me.菜单信息DataGridView.AllowUserToAddRows = False
+        Me.菜单信息DataGridView.AllowUserToDeleteRows = False
+        Me.菜单信息DataGridView.AllowUserToResizeColumns = False
+        Me.菜单信息DataGridView.AllowUserToResizeRows = False
         Me.菜单信息DataGridView.AutoGenerateColumns = False
+        Me.菜单信息DataGridView.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable
         Me.菜单信息DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.菜单信息DataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewCheckBoxColumn1})
         Me.菜单信息DataGridView.DataSource = Me.菜单信息BindingSource
-        Me.菜单信息DataGridView.Location = New System.Drawing.Point(-2, 154)
+        Me.菜单信息DataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
+        Me.菜单信息DataGridView.Location = New System.Drawing.Point(-2, 206)
         Me.菜单信息DataGridView.Name = "菜单信息DataGridView"
         Me.菜单信息DataGridView.RowTemplate.Height = 23
         Me.菜单信息DataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.菜单信息DataGridView.Size = New System.Drawing.Size(543, 220)
+        Me.菜单信息DataGridView.Size = New System.Drawing.Size(543, 258)
         Me.菜单信息DataGridView.TabIndex = 8
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "编号"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "编号"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "名称"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "名称"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "价格"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "价格"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "VIP价格"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "VIP价格"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        '
-        'DataGridViewCheckBoxColumn1
-        '
-        Me.DataGridViewCheckBoxColumn1.DataPropertyName = "现可供应"
-        Me.DataGridViewCheckBoxColumn1.HeaderText = "现可供应"
-        Me.DataGridViewCheckBoxColumn1.Name = "DataGridViewCheckBoxColumn1"
         '
         'bt_Quit
         '
         Me.bt_Quit.BackColor = System.Drawing.SystemColors.ControlLight
         Me.bt_Quit.Font = New System.Drawing.Font("宋体", 12.0!)
         Me.bt_Quit.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.bt_Quit.Location = New System.Drawing.Point(429, 98)
+        Me.bt_Quit.Location = New System.Drawing.Point(332, 98)
         Me.bt_Quit.Name = "bt_Quit"
         Me.bt_Quit.Size = New System.Drawing.Size(90, 35)
         Me.bt_Quit.TabIndex = 7
@@ -140,7 +103,7 @@ Partial Class ListForm
         Me.bt_Add.Location = New System.Drawing.Point(225, 53)
         Me.bt_Add.Name = "bt_Add"
         Me.bt_Add.Size = New System.Drawing.Size(90, 35)
-        Me.bt_Add.TabIndex = 9
+        Me.bt_Add.TabIndex = 3
         Me.bt_Add.Text = "添加"
         Me.bt_Add.UseVisualStyleBackColor = False
         '
@@ -149,11 +112,11 @@ Partial Class ListForm
         Me.bt_Search.BackColor = System.Drawing.SystemColors.ControlLight
         Me.bt_Search.Font = New System.Drawing.Font("宋体", 12.0!)
         Me.bt_Search.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.bt_Search.Location = New System.Drawing.Point(332, 98)
+        Me.bt_Search.Location = New System.Drawing.Point(387, 155)
         Me.bt_Search.Name = "bt_Search"
-        Me.bt_Search.Size = New System.Drawing.Size(90, 35)
-        Me.bt_Search.TabIndex = 10
-        Me.bt_Search.Text = "查询"
+        Me.bt_Search.Size = New System.Drawing.Size(141, 31)
+        Me.bt_Search.TabIndex = 6
+        Me.bt_Search.Text = "由上至下查询"
         Me.bt_Search.UseVisualStyleBackColor = False
         '
         'bt_Delete
@@ -164,7 +127,7 @@ Partial Class ListForm
         Me.bt_Delete.Location = New System.Drawing.Point(225, 98)
         Me.bt_Delete.Name = "bt_Delete"
         Me.bt_Delete.Size = New System.Drawing.Size(90, 35)
-        Me.bt_Delete.TabIndex = 11
+        Me.bt_Delete.TabIndex = 4
         Me.bt_Delete.Text = "删除"
         Me.bt_Delete.UseVisualStyleBackColor = False
         '
@@ -176,35 +139,35 @@ Partial Class ListForm
         Me.bt_Edit.Location = New System.Drawing.Point(332, 53)
         Me.bt_Edit.Name = "bt_Edit"
         Me.bt_Edit.Size = New System.Drawing.Size(90, 35)
-        Me.bt_Edit.TabIndex = 12
+        Me.bt_Edit.TabIndex = 5
         Me.bt_Edit.Text = "编辑"
         Me.bt_Edit.UseVisualStyleBackColor = False
         '
-        'TextBox1
+        'tb_Number
         '
-        Me.TextBox1.Location = New System.Drawing.Point(72, 54)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(126, 21)
-        Me.TextBox1.TabIndex = 13
+        Me.tb_Number.Location = New System.Drawing.Point(72, 54)
+        Me.tb_Number.Name = "tb_Number"
+        Me.tb_Number.Size = New System.Drawing.Size(126, 21)
+        Me.tb_Number.TabIndex = 0
         '
-        'TextBox2
+        'tb_Name
         '
-        Me.TextBox2.Location = New System.Drawing.Point(72, 80)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(126, 21)
-        Me.TextBox2.TabIndex = 14
+        Me.tb_Name.Location = New System.Drawing.Point(72, 80)
+        Me.tb_Name.Name = "tb_Name"
+        Me.tb_Name.Size = New System.Drawing.Size(126, 21)
+        Me.tb_Name.TabIndex = 1
         '
-        'TextBox3
+        'tb_Price
         '
-        Me.TextBox3.Location = New System.Drawing.Point(72, 108)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(126, 21)
-        Me.TextBox3.TabIndex = 15
+        Me.tb_Price.Location = New System.Drawing.Point(72, 108)
+        Me.tb_Price.Name = "tb_Price"
+        Me.tb_Price.Size = New System.Drawing.Size(126, 21)
+        Me.tb_Price.TabIndex = 2
         '
         'rb_isGiven
         '
         Me.rb_isGiven.AutoSize = True
-        Me.rb_isGiven.Location = New System.Drawing.Point(14, 135)
+        Me.rb_isGiven.Location = New System.Drawing.Point(3, 4)
         Me.rb_isGiven.Name = "rb_isGiven"
         Me.rb_isGiven.Size = New System.Drawing.Size(71, 16)
         Me.rb_isGiven.TabIndex = 16
@@ -215,7 +178,7 @@ Partial Class ListForm
         'rb_isnotGiven
         '
         Me.rb_isnotGiven.AutoSize = True
-        Me.rb_isnotGiven.Location = New System.Drawing.Point(115, 135)
+        Me.rb_isnotGiven.Location = New System.Drawing.Point(101, 4)
         Me.rb_isnotGiven.Name = "rb_isnotGiven"
         Me.rb_isnotGiven.Size = New System.Drawing.Size(83, 16)
         Me.rb_isnotGiven.TabIndex = 17
@@ -268,52 +231,193 @@ Partial Class ListForm
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(429, 57)
+        Me.Label4.Location = New System.Drawing.Point(436, 76)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(77, 12)
         Me.Label4.TabIndex = 22
         Me.Label4.Text = "总菜品数量："
         '
+        'lb_Num
+        '
+        Me.lb_Num.AutoSize = True
+        Me.lb_Num.Font = New System.Drawing.Font("宋体", 12.0!)
+        Me.lb_Num.Location = New System.Drawing.Point(458, 91)
+        Me.lb_Num.Name = "lb_Num"
+        Me.lb_Num.Size = New System.Drawing.Size(15, 16)
+        Me.lb_Num.TabIndex = 23
+        Me.lb_Num.Text = "1"
+        '
+        'lb_ErrorInfo
+        '
+        Me.lb_ErrorInfo.AutoSize = True
+        Me.lb_ErrorInfo.Font = New System.Drawing.Font("黑体", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.lb_ErrorInfo.ForeColor = System.Drawing.Color.Red
+        Me.lb_ErrorInfo.Location = New System.Drawing.Point(223, 139)
+        Me.lb_ErrorInfo.Name = "lb_ErrorInfo"
+        Me.lb_ErrorInfo.Size = New System.Drawing.Size(65, 12)
+        Me.lb_ErrorInfo.TabIndex = 24
+        Me.lb_ErrorInfo.Text = "Error_Info"
+        Me.lb_ErrorInfo.Visible = False
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "编号"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "编号"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "名称"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "名称"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "价格"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "价格"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "VIP价格"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "VIP价格"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        '
+        'DataGridViewCheckBoxColumn1
+        '
+        Me.DataGridViewCheckBoxColumn1.DataPropertyName = "现可供应"
+        Me.DataGridViewCheckBoxColumn1.HeaderText = "现可供应"
+        Me.DataGridViewCheckBoxColumn1.Name = "DataGridViewCheckBoxColumn1"
+        '
+        '菜单信息BindingSource
+        '
+        Me.菜单信息BindingSource.DataMember = "菜单信息"
+        Me.菜单信息BindingSource.DataSource = Me.RMS_DataSet
+        '
+        'RMS_DataSet
+        '
+        Me.RMS_DataSet.DataSetName = "RMS_DataSet"
+        Me.RMS_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        '菜单信息TableAdapter
+        '
+        Me.菜单信息TableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.UpdateOrder = WindowsApp3.RMS_DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.会员信息TableAdapter = Nothing
+        Me.TableAdapterManager.管理员信息TableAdapter = Nothing
+        Me.TableAdapterManager.菜单信息TableAdapter = Me.菜单信息TableAdapter
+        Me.TableAdapterManager.雇员信息TableAdapter = Nothing
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(90, 162)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(267, 21)
+        Me.TextBox1.TabIndex = 25
+        '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("宋体", 12.0!)
-        Me.Label5.Location = New System.Drawing.Point(451, 72)
+        Me.Label5.Location = New System.Drawing.Point(13, 162)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(15, 16)
-        Me.Label5.TabIndex = 23
-        Me.Label5.Text = "1"
+        Me.Label5.Size = New System.Drawing.Size(71, 16)
+        Me.Label5.TabIndex = 26
+        Me.Label5.Text = "查询框："
+        '
+        'RadioButton1
+        '
+        Me.RadioButton1.AutoSize = True
+        Me.RadioButton1.Location = New System.Drawing.Point(0, 3)
+        Me.RadioButton1.Name = "RadioButton1"
+        Me.RadioButton1.Size = New System.Drawing.Size(83, 16)
+        Me.RadioButton1.TabIndex = 27
+        Me.RadioButton1.TabStop = True
+        Me.RadioButton1.Text = "按编号查询"
+        Me.RadioButton1.UseVisualStyleBackColor = True
+        '
+        'RadioButton2
+        '
+        Me.RadioButton2.AutoSize = True
+        Me.RadioButton2.Location = New System.Drawing.Point(128, 3)
+        Me.RadioButton2.Name = "RadioButton2"
+        Me.RadioButton2.Size = New System.Drawing.Size(83, 16)
+        Me.RadioButton2.TabIndex = 28
+        Me.RadioButton2.TabStop = True
+        Me.RadioButton2.Text = "按名称查询"
+        Me.RadioButton2.UseVisualStyleBackColor = True
+        '
+        'RadioButton3
+        '
+        Me.RadioButton3.AutoSize = True
+        Me.RadioButton3.Location = New System.Drawing.Point(256, 3)
+        Me.RadioButton3.Name = "RadioButton3"
+        Me.RadioButton3.Size = New System.Drawing.Size(83, 16)
+        Me.RadioButton3.TabIndex = 29
+        Me.RadioButton3.TabStop = True
+        Me.RadioButton3.Text = "按价格查询"
+        Me.RadioButton3.UseVisualStyleBackColor = True
+        '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.RadioButton1)
+        Me.Panel1.Controls.Add(Me.RadioButton3)
+        Me.Panel1.Controls.Add(Me.RadioButton2)
+        Me.Panel1.Location = New System.Drawing.Point(14, 181)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(343, 19)
+        Me.Panel1.TabIndex = 30
+        '
+        'Panel2
+        '
+        Me.Panel2.Controls.Add(Me.rb_isGiven)
+        Me.Panel2.Controls.Add(Me.rb_isnotGiven)
+        Me.Panel2.Location = New System.Drawing.Point(14, 135)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(184, 20)
+        Me.Panel2.TabIndex = 31
         '
         'ListForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.InactiveCaption
-        Me.ClientSize = New System.Drawing.Size(540, 375)
+        Me.ClientSize = New System.Drawing.Size(540, 465)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.lb_ErrorInfo)
+        Me.Controls.Add(Me.lb_Num)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Title)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.rb_isnotGiven)
-        Me.Controls.Add(Me.rb_isGiven)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.tb_Price)
+        Me.Controls.Add(Me.tb_Name)
+        Me.Controls.Add(Me.tb_Number)
         Me.Controls.Add(Me.bt_Edit)
         Me.Controls.Add(Me.bt_Delete)
         Me.Controls.Add(Me.bt_Search)
         Me.Controls.Add(Me.bt_Add)
         Me.Controls.Add(Me.菜单信息DataGridView)
         Me.Controls.Add(Me.bt_Quit)
+        Me.Controls.Add(Me.Panel2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "ListForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ListForm"
-        CType(Me.RMS_DataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.菜单信息BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.菜单信息DataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.菜单信息BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RMS_DataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -333,9 +437,9 @@ Partial Class ListForm
     Friend WithEvents bt_Search As Button
     Friend WithEvents bt_Delete As Button
     Friend WithEvents bt_Edit As Button
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents tb_Number As TextBox
+    Friend WithEvents tb_Name As TextBox
+    Friend WithEvents tb_Price As TextBox
     Friend WithEvents rb_isGiven As RadioButton
     Friend WithEvents rb_isnotGiven As RadioButton
     Friend WithEvents Label1 As Label
@@ -343,5 +447,13 @@ Partial Class ListForm
     Friend WithEvents Label3 As Label
     Friend WithEvents Title As Label
     Friend WithEvents Label4 As Label
+    Friend WithEvents lb_Num As Label
+    Friend WithEvents lb_ErrorInfo As Label
+    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label5 As Label
+    Friend WithEvents RadioButton1 As RadioButton
+    Friend WithEvents RadioButton2 As RadioButton
+    Friend WithEvents RadioButton3 As RadioButton
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Panel2 As Panel
 End Class

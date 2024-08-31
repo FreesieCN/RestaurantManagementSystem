@@ -37,6 +37,7 @@ Partial Class LoginForm
         Me.管理员信息BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.管理员信息TableAdapter = New WindowsApp3.RMS_DataSetTableAdapters.管理员信息TableAdapter()
         Me.TableAdapterManager = New WindowsApp3.RMS_DataSetTableAdapters.TableAdapterManager()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.RMS_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.管理员信息BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -176,6 +177,15 @@ Partial Class LoginForm
         Me.TableAdapterManager.菜单信息TableAdapter = Nothing
         Me.TableAdapterManager.雇员信息TableAdapter = Nothing
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(247, 12)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 10
+        Me.Button1.Text = "测试用"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'LoginForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
@@ -183,6 +193,7 @@ Partial Class LoginForm
         Me.AutoSize = True
         Me.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.ClientSize = New System.Drawing.Size(334, 191)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.lb_ErrorInfo_1)
         Me.Controls.Add(Me.lb_ErrorInfo_0)
         Me.Controls.Add(Me.tb_PWD)
@@ -220,4 +231,5 @@ Partial Class LoginForm
     Friend WithEvents lb_ErrorInfo_0 As Label
     Friend WithEvents lb_ErrorInfo_1 As Label
     Friend WithEvents lb_ErrorInfo_2 As Label
+    Friend WithEvents Button1 As Button
 End Class

@@ -138,6 +138,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>RMS_DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="RMS_DataSet.vb">
+      <DependentUpon>RMS_DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="VIPForm.Designer.vb">
       <DependentUpon>VIPForm.vb</DependentUpon>
     </Compile>
