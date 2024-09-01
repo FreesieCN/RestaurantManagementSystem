@@ -30,7 +30,7 @@
         Me.菜单信息TableAdapter.Fill(Me.RMS_DataSet.菜单信息)
         rb_isGiven.Checked = True
         rb_NumberSH.Checked = True
-
+        lb_Num.Text = Me.菜单信息TableAdapter.Num().ToString
     End Sub
 
     Private Sub bt_Quit_Leave(sender As Object, e As EventArgs) Handles bt_Quit.Leave
@@ -48,7 +48,12 @@
         If ErrorDivide() = False Then
             Try
                 Dim VIP_Price As Double = VIPPrice(tb_Price.Text)
-                菜单信息TableAdapter.InsertQuery(tb_Number.Text, tb_Name.Text, tb_Price.Text, VIP_Price, rb_isGiven.Checked)
+                Dim IsGiven As Boolean = False
+                If rb_isGiven.Checked Then
+                    IsGiven = True
+                End If
+                Me.菜单信息TableAdapter.Insert(tb_Number.Text, tb_Name.Text, tb_Price.Text, VIP_Price, IsGiven)
+                Me.菜单信息TableAdapter.Fill(Me.RMS_DataSet.菜单信息)
                 MsgBox("添加成功！")
             Catch ex As Exception
                 MsgBox(ex.Message)
@@ -109,4 +114,36 @@
         bt_Search.ForeColor = Color.Black
     End Sub
 
+    Private Sub 菜单信息DataGridView_Click(sender As Object, e As EventArgs) Handles 菜单信息DataGridView.Click
+        tb_Number.Text = Me.菜单信息DataGridView.CurrentRow.Cells(0).Value.ToString
+        tb_Name.Text = Me.菜单信息DataGridView.CurrentRow.Cells(1).Value.ToString
+        tb_Price.Text = Me.菜单信息DataGridView.CurrentRow.Cells(2).Value.ToString
+        If Me.菜单信息DataGridView.CurrentRow.Cells(4).Value = True Then
+            rb_isGiven.Checked = True
+        Else
+            rb_isnotGiven.Checked = True
+        End If
+    End Sub
+
+    Private Sub bt_Edit_Click(sender As Object, e As EventArgs) Handles bt_Edit.Click
+        If ErrorDivide() = False Then
+            Try
+                Dim o_num As String = Me.菜单信息DataGridView.CurrentRow.Cells(0).Value.ToString
+                Dim o_name As String = Me.菜单信息DataGridView.CurrentRow.Cells(1).Value.ToString
+                Dim o_price As Double = Me.菜单信息DataGridView.CurrentRow.Cells(2).Value
+                Dim o_VIPPrice As Double = Me.菜单信息DataGridView.CurrentRow.Cells(3).Value
+                Dim o_IsGiven As Boolean = Me.菜单信息DataGridView.CurrentRow.Cells(4).Value
+                Dim VIP_Price As Double = VIPPrice(tb_Price.Text)
+                Dim IsGiven As Boolean = False
+                If rb_isGiven.Checked Then
+                    IsGiven = True
+                End If
+                Me.菜单信息TableAdapter.Update(tb_Number.Text, tb_Name.Text, tb_Price.Text, VIP_Price, IsGiven, o_num, o_name, o_price, o_VIPPrice, o_IsGiven)
+                Me.菜单信息TableAdapter.Fill(Me.RMS_DataSet.菜单信息)
+                MsgBox("添加成功！")
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+        End If
+    End Sub
 End Class
