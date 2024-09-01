@@ -45,7 +45,7 @@ Partial Class ListForm
         Me.Label5 = New System.Windows.Forms.Label()
         Me.rb_NumberSH = New System.Windows.Forms.RadioButton()
         Me.rb_NameSH = New System.Windows.Forms.RadioButton()
-        Me.rb_PriceSH = New System.Windows.Forms.RadioButton()
+        Me.rb_IsGivenSH = New System.Windows.Forms.RadioButton()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.lb_Search = New System.Windows.Forms.Label()
@@ -58,6 +58,8 @@ Partial Class ListForm
         Me.RMS_DataSet = New WindowsApp3.RMS_DataSet()
         Me.菜单信息TableAdapter = New WindowsApp3.RMS_DataSetTableAdapters.菜单信息TableAdapter()
         Me.TableAdapterManager = New WindowsApp3.RMS_DataSetTableAdapters.TableAdapterManager()
+        Me.rb_IsNotGivenSH = New System.Windows.Forms.RadioButton()
+        Me.bt_Reset = New System.Windows.Forms.Button()
         CType(Me.菜单信息DataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -92,7 +94,7 @@ Partial Class ListForm
         Me.bt_Quit.Location = New System.Drawing.Point(332, 98)
         Me.bt_Quit.Name = "bt_Quit"
         Me.bt_Quit.Size = New System.Drawing.Size(90, 35)
-        Me.bt_Quit.TabIndex = 7
+        Me.bt_Quit.TabIndex = 6
         Me.bt_Quit.Text = "返回"
         Me.bt_Quit.UseVisualStyleBackColor = False
         '
@@ -113,10 +115,10 @@ Partial Class ListForm
         Me.bt_Search.BackColor = System.Drawing.SystemColors.ControlLight
         Me.bt_Search.Font = New System.Drawing.Font("宋体", 12.0!)
         Me.bt_Search.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.bt_Search.Location = New System.Drawing.Point(384, 150)
+        Me.bt_Search.Location = New System.Drawing.Point(435, 54)
         Me.bt_Search.Name = "bt_Search"
-        Me.bt_Search.Size = New System.Drawing.Size(141, 31)
-        Me.bt_Search.TabIndex = 6
+        Me.bt_Search.Size = New System.Drawing.Size(90, 35)
+        Me.bt_Search.TabIndex = 8
         Me.bt_Search.Text = "查询"
         Me.bt_Search.UseVisualStyleBackColor = False
         '
@@ -232,7 +234,7 @@ Partial Class ListForm
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(436, 76)
+        Me.Label4.Location = New System.Drawing.Point(437, 19)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(77, 12)
         Me.Label4.TabIndex = 22
@@ -242,7 +244,7 @@ Partial Class ListForm
         '
         Me.lb_Num.AutoSize = True
         Me.lb_Num.Font = New System.Drawing.Font("宋体", 12.0!)
-        Me.lb_Num.Location = New System.Drawing.Point(458, 91)
+        Me.lb_Num.Location = New System.Drawing.Point(459, 34)
         Me.lb_Num.Name = "lb_Num"
         Me.lb_Num.Size = New System.Drawing.Size(15, 16)
         Me.lb_Num.TabIndex = 23
@@ -264,8 +266,8 @@ Partial Class ListForm
         '
         Me.tb_Search.Location = New System.Drawing.Point(90, 162)
         Me.tb_Search.Name = "tb_Search"
-        Me.tb_Search.Size = New System.Drawing.Size(267, 21)
-        Me.tb_Search.TabIndex = 25
+        Me.tb_Search.Size = New System.Drawing.Size(435, 21)
+        Me.tb_Search.TabIndex = 7
         '
         'Label5
         '
@@ -291,7 +293,7 @@ Partial Class ListForm
         'rb_NameSH
         '
         Me.rb_NameSH.AutoSize = True
-        Me.rb_NameSH.Location = New System.Drawing.Point(128, 3)
+        Me.rb_NameSH.Location = New System.Drawing.Point(140, 3)
         Me.rb_NameSH.Name = "rb_NameSH"
         Me.rb_NameSH.Size = New System.Drawing.Size(83, 16)
         Me.rb_NameSH.TabIndex = 28
@@ -299,25 +301,26 @@ Partial Class ListForm
         Me.rb_NameSH.Text = "按名称查询"
         Me.rb_NameSH.UseVisualStyleBackColor = True
         '
-        'rb_PriceSH
+        'rb_IsGivenSH
         '
-        Me.rb_PriceSH.AutoSize = True
-        Me.rb_PriceSH.Location = New System.Drawing.Point(256, 3)
-        Me.rb_PriceSH.Name = "rb_PriceSH"
-        Me.rb_PriceSH.Size = New System.Drawing.Size(83, 16)
-        Me.rb_PriceSH.TabIndex = 29
-        Me.rb_PriceSH.TabStop = True
-        Me.rb_PriceSH.Text = "按价格查询"
-        Me.rb_PriceSH.UseVisualStyleBackColor = True
+        Me.rb_IsGivenSH.AutoSize = True
+        Me.rb_IsGivenSH.Location = New System.Drawing.Point(277, 3)
+        Me.rb_IsGivenSH.Name = "rb_IsGivenSH"
+        Me.rb_IsGivenSH.Size = New System.Drawing.Size(83, 16)
+        Me.rb_IsGivenSH.TabIndex = 29
+        Me.rb_IsGivenSH.TabStop = True
+        Me.rb_IsGivenSH.Text = "查询可供应"
+        Me.rb_IsGivenSH.UseVisualStyleBackColor = True
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.rb_IsNotGivenSH)
         Me.Panel1.Controls.Add(Me.rb_NumberSH)
-        Me.Panel1.Controls.Add(Me.rb_PriceSH)
+        Me.Panel1.Controls.Add(Me.rb_IsGivenSH)
         Me.Panel1.Controls.Add(Me.rb_NameSH)
         Me.Panel1.Location = New System.Drawing.Point(14, 181)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(343, 19)
+        Me.Panel1.Size = New System.Drawing.Size(511, 19)
         Me.Panel1.TabIndex = 30
         '
         'Panel2
@@ -332,7 +335,7 @@ Partial Class ListForm
         'lb_Search
         '
         Me.lb_Search.Font = New System.Drawing.Font("宋体", 12.0!)
-        Me.lb_Search.Location = New System.Drawing.Point(384, 184)
+        Me.lb_Search.Location = New System.Drawing.Point(384, 140)
         Me.lb_Search.Name = "lb_Search"
         Me.lb_Search.Size = New System.Drawing.Size(141, 19)
         Me.lb_Search.TabIndex = 32
@@ -393,12 +396,37 @@ Partial Class ListForm
         Me.TableAdapterManager.菜单信息TableAdapter = Me.菜单信息TableAdapter
         Me.TableAdapterManager.雇员信息TableAdapter = Nothing
         '
+        'rb_IsNotGivenSH
+        '
+        Me.rb_IsNotGivenSH.AutoSize = True
+        Me.rb_IsNotGivenSH.Location = New System.Drawing.Point(414, 3)
+        Me.rb_IsNotGivenSH.Name = "rb_IsNotGivenSH"
+        Me.rb_IsNotGivenSH.Size = New System.Drawing.Size(95, 16)
+        Me.rb_IsNotGivenSH.TabIndex = 30
+        Me.rb_IsNotGivenSH.TabStop = True
+        Me.rb_IsNotGivenSH.Text = "查询不可供应"
+        Me.rb_IsNotGivenSH.UseVisualStyleBackColor = True
+        '
+        'bt_Reset
+        '
+        Me.bt_Reset.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.bt_Reset.Enabled = False
+        Me.bt_Reset.Font = New System.Drawing.Font("宋体", 12.0!)
+        Me.bt_Reset.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.bt_Reset.Location = New System.Drawing.Point(435, 98)
+        Me.bt_Reset.Name = "bt_Reset"
+        Me.bt_Reset.Size = New System.Drawing.Size(90, 35)
+        Me.bt_Reset.TabIndex = 33
+        Me.bt_Reset.Text = "还原"
+        Me.bt_Reset.UseVisualStyleBackColor = False
+        '
         'ListForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.ClientSize = New System.Drawing.Size(540, 465)
+        Me.Controls.Add(Me.bt_Reset)
         Me.Controls.Add(Me.lb_Search)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label5)
@@ -466,8 +494,10 @@ Partial Class ListForm
     Friend WithEvents Label5 As Label
     Friend WithEvents rb_NumberSH As RadioButton
     Friend WithEvents rb_NameSH As RadioButton
-    Friend WithEvents rb_PriceSH As RadioButton
+    Friend WithEvents rb_IsGivenSH As RadioButton
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents lb_Search As Label
+    Friend WithEvents rb_IsNotGivenSH As RadioButton
+    Friend WithEvents bt_Reset As Button
 End Class

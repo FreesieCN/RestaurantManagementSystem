@@ -26,10 +26,13 @@
     End Function
 
     Private Sub ListForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: 这行代码将数据加载到表“RMS_DataSet.菜单信息”中。您可以根据需要移动或移除它。
-        Me.菜单信息TableAdapter.Fill(Me.RMS_DataSet.菜单信息)
         rb_isGiven.Checked = True
         rb_NumberSH.Checked = True
+        DGVRefresh()
+    End Sub
+
+    Private Sub DGVRefresh()
+        Me.菜单信息TableAdapter.Fill(Me.RMS_DataSet.菜单信息)
         lb_Num.Text = Me.菜单信息TableAdapter.Num().ToString
     End Sub
 
@@ -53,7 +56,7 @@
                     IsGiven = True
                 End If
                 Me.菜单信息TableAdapter.Insert(tb_Number.Text, tb_Name.Text, tb_Price.Text, VIP_Price, IsGiven)
-                Me.菜单信息TableAdapter.Fill(Me.RMS_DataSet.菜单信息)
+                DGVRefresh()
                 MsgBox("添加成功！")
             Catch ex As Exception
                 MsgBox(ex.Message)
@@ -62,24 +65,25 @@
     End Sub
 
     '标识排序对象
-    '0：名称，1：编号，2：价格
+    '0：名称，1：编号，2：可供应，3：不可供应
     Enum SearchMode
         Name = &H0
         Number = &H1
-        Price = &H2
+        IsGiven = &H2
+        IsNotGiven = &H3
     End Enum
 
     Sub Search(m As SearchMode)
         Select Case m
             Case &H0
-                'todo: 名称
+                菜单信息TableAdapter.FillByName(RMS_DataSet.菜单信息, tb_Search.Text)
             Case &H1
-                'todo: 编号
+                菜单信息TableAdapter.FillByNumber(RMS_DataSet.菜单信息, tb_Search.Text)
             Case &H2
-                'todo: 价格
+                菜单信息TableAdapter.FillByIsGiven(RMS_DataSet.菜单信息)
+            Case &H3
+                菜单信息TableAdapter.FillByIsNotGiven(RMS_DataSet.菜单信息)
         End Select
-        '调试用代码，记得删除
-        MsgBox(m.ToString)
     End Sub
 
     Private Sub bt_Search_Click(sender As Object, e As EventArgs) Handles bt_Search.Click
@@ -95,12 +99,15 @@
                     info = SearchMode.Name
                 ElseIf rb_NumberSH.Checked Then
                     info = SearchMode.Number
-                ElseIf rb_PriceSH.Checked Then
-                    info = SearchMode.Price
+                ElseIf rb_IsGivenSH.Checked Then
+                    info = SearchMode.IsGiven
+                ElseIf rb_isnotGivenSH.Checked Then
+                    info = SearchMode.IsNotGiven
                 End If
                 lb_Search.ForeColor = Color.Black
                 lb_Search.Visible = True
                 Search(info)
+                bt_Reset.Enabled = True
             Catch ex As Exception
                 lb_Search.ForeColor = Color.Red
                 lb_Search.Text = "查询失败"
@@ -139,11 +146,33 @@
                     IsGiven = True
                 End If
                 Me.菜单信息TableAdapter.Update(tb_Number.Text, tb_Name.Text, tb_Price.Text, VIP_Price, IsGiven, o_num, o_name, o_price, o_VIPPrice, o_IsGiven)
-                Me.菜单信息TableAdapter.Fill(Me.RMS_DataSet.菜单信息)
-                MsgBox("添加成功！")
+                DGVRefresh()
+                MsgBox("编辑成功！")
             Catch ex As Exception
                 MsgBox(ex.Message)
             End Try
         End If
+    End Sub
+
+    Private Sub bt_Delete_Click(sender As Object, e As EventArgs) Handles bt_Delete.Click
+        If ErrorDivide() = False Then
+            Try
+                Dim o_num As String = Me.菜单信息DataGridView.CurrentRow.Cells(0).Value.ToString
+                Dim o_name As String = Me.菜单信息DataGridView.CurrentRow.Cells(1).Value.ToString
+                Dim o_price As Double = Me.菜单信息DataGridView.CurrentRow.Cells(2).Value
+                Dim o_VIPPrice As Double = Me.菜单信息DataGridView.CurrentRow.Cells(3).Value
+                Dim o_IsGiven As Boolean = Me.菜单信息DataGridView.CurrentRow.Cells(4).Value
+                菜单信息TableAdapter.Delete(o_num, o_name, o_price, o_VIPPrice, o_IsGiven)
+                DGVRefresh()
+                MsgBox("删除成功！")
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+        End If
+    End Sub
+
+    Private Sub bt_Reset_Click(sender As Object, e As EventArgs) Handles bt_Reset.Click
+        bt_Reset.Enabled = False
+        DGVRefresh()
     End Sub
 End Class
