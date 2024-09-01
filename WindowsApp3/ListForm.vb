@@ -107,6 +107,7 @@
                 lb_Search.ForeColor = Color.Black
                 lb_Search.Visible = True
                 Search(info)
+                lb_Search.Text = "查询成功"
                 bt_Reset.Enabled = True
             Catch ex As Exception
                 lb_Search.ForeColor = Color.Red
@@ -175,4 +176,5 @@
         bt_Reset.Enabled = False
         DGVRefresh()
     End Sub
+
 End Class

@@ -24,6 +24,13 @@ Partial Class ListForm
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.菜单信息DataGridView = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.菜单信息BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.RMS_DataSet = New WindowsApp3.RMS_DataSet()
         Me.bt_Quit = New System.Windows.Forms.Button()
         Me.bt_Add = New System.Windows.Forms.Button()
         Me.bt_Search = New System.Windows.Forms.Button()
@@ -47,24 +54,17 @@ Partial Class ListForm
         Me.rb_NameSH = New System.Windows.Forms.RadioButton()
         Me.rb_IsGivenSH = New System.Windows.Forms.RadioButton()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.rb_IsNotGivenSH = New System.Windows.Forms.RadioButton()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.lb_Search = New System.Windows.Forms.Label()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.菜单信息BindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.RMS_DataSet = New WindowsApp3.RMS_DataSet()
         Me.菜单信息TableAdapter = New WindowsApp3.RMS_DataSetTableAdapters.菜单信息TableAdapter()
         Me.TableAdapterManager = New WindowsApp3.RMS_DataSetTableAdapters.TableAdapterManager()
-        Me.rb_IsNotGivenSH = New System.Windows.Forms.RadioButton()
         Me.bt_Reset = New System.Windows.Forms.Button()
         CType(Me.菜单信息DataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel1.SuspendLayout()
-        Me.Panel2.SuspendLayout()
         CType(Me.菜单信息BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RMS_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         '菜单信息DataGridView
@@ -85,6 +85,46 @@ Partial Class ListForm
         Me.菜单信息DataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.菜单信息DataGridView.Size = New System.Drawing.Size(543, 258)
         Me.菜单信息DataGridView.TabIndex = 8
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "编号"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "编号"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "名称"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "名称"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "价格"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "价格"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "VIP价格"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "VIP价格"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        '
+        'DataGridViewCheckBoxColumn1
+        '
+        Me.DataGridViewCheckBoxColumn1.DataPropertyName = "现可供应"
+        Me.DataGridViewCheckBoxColumn1.HeaderText = "现可供应"
+        Me.DataGridViewCheckBoxColumn1.Name = "DataGridViewCheckBoxColumn1"
+        '
+        '菜单信息BindingSource
+        '
+        Me.菜单信息BindingSource.DataMember = "菜单信息"
+        Me.菜单信息BindingSource.DataSource = Me.RMS_DataSet
+        '
+        'RMS_DataSet
+        '
+        Me.RMS_DataSet.DataSetName = "RMS_DataSet"
+        Me.RMS_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'bt_Quit
         '
@@ -323,6 +363,17 @@ Partial Class ListForm
         Me.Panel1.Size = New System.Drawing.Size(511, 19)
         Me.Panel1.TabIndex = 30
         '
+        'rb_IsNotGivenSH
+        '
+        Me.rb_IsNotGivenSH.AutoSize = True
+        Me.rb_IsNotGivenSH.Location = New System.Drawing.Point(414, 3)
+        Me.rb_IsNotGivenSH.Name = "rb_IsNotGivenSH"
+        Me.rb_IsNotGivenSH.Size = New System.Drawing.Size(95, 16)
+        Me.rb_IsNotGivenSH.TabIndex = 30
+        Me.rb_IsNotGivenSH.TabStop = True
+        Me.rb_IsNotGivenSH.Text = "查询不可供应"
+        Me.rb_IsNotGivenSH.UseVisualStyleBackColor = True
+        '
         'Panel2
         '
         Me.Panel2.Controls.Add(Me.rb_isGiven)
@@ -343,46 +394,6 @@ Partial Class ListForm
         Me.lb_Search.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.lb_Search.Visible = False
         '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "编号"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "编号"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "名称"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "名称"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "价格"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "价格"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "VIP价格"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "VIP价格"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        '
-        'DataGridViewCheckBoxColumn1
-        '
-        Me.DataGridViewCheckBoxColumn1.DataPropertyName = "现可供应"
-        Me.DataGridViewCheckBoxColumn1.HeaderText = "现可供应"
-        Me.DataGridViewCheckBoxColumn1.Name = "DataGridViewCheckBoxColumn1"
-        '
-        '菜单信息BindingSource
-        '
-        Me.菜单信息BindingSource.DataMember = "菜单信息"
-        Me.菜单信息BindingSource.DataSource = Me.RMS_DataSet
-        '
-        'RMS_DataSet
-        '
-        Me.RMS_DataSet.DataSetName = "RMS_DataSet"
-        Me.RMS_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         '菜单信息TableAdapter
         '
         Me.菜单信息TableAdapter.ClearBeforeFill = True
@@ -395,17 +406,6 @@ Partial Class ListForm
         Me.TableAdapterManager.管理员信息TableAdapter = Nothing
         Me.TableAdapterManager.菜单信息TableAdapter = Me.菜单信息TableAdapter
         Me.TableAdapterManager.雇员信息TableAdapter = Nothing
-        '
-        'rb_IsNotGivenSH
-        '
-        Me.rb_IsNotGivenSH.AutoSize = True
-        Me.rb_IsNotGivenSH.Location = New System.Drawing.Point(414, 3)
-        Me.rb_IsNotGivenSH.Name = "rb_IsNotGivenSH"
-        Me.rb_IsNotGivenSH.Size = New System.Drawing.Size(95, 16)
-        Me.rb_IsNotGivenSH.TabIndex = 30
-        Me.rb_IsNotGivenSH.TabStop = True
-        Me.rb_IsNotGivenSH.Text = "查询不可供应"
-        Me.rb_IsNotGivenSH.UseVisualStyleBackColor = True
         '
         'bt_Reset
         '
@@ -453,12 +453,12 @@ Partial Class ListForm
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ListForm"
         CType(Me.菜单信息DataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.菜单信息BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RMS_DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.菜单信息BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RMS_DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
