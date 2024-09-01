@@ -28,6 +28,8 @@
     Private Sub ListForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: 这行代码将数据加载到表“RMS_DataSet.菜单信息”中。您可以根据需要移动或移除它。
         Me.菜单信息TableAdapter.Fill(Me.RMS_DataSet.菜单信息)
+        rb_isGiven.Checked = True
+        rb_NumberSH.Checked = True
 
     End Sub
 
@@ -38,14 +40,73 @@
         End If
     End Sub
 
+    Function VIPPrice(p As Double)
+        Return p * 0.8
+    End Function
+
     Private Sub bt_Add_Click(sender As Object, e As EventArgs) Handles bt_Add.Click
         If ErrorDivide() = False Then
             Try
-
+                Dim VIP_Price As Double = VIPPrice(tb_Price.Text)
+                菜单信息TableAdapter.InsertQuery(tb_Number.Text, tb_Name.Text, tb_Price.Text, VIP_Price, rb_isGiven.Checked)
+                MsgBox("添加成功！")
             Catch ex As Exception
                 MsgBox(ex.Message)
             End Try
         End If
+    End Sub
+
+    '标识排序对象
+    '0：名称，1：编号，2：价格
+    Enum SearchMode
+        Name = &H0
+        Number = &H1
+        Price = &H2
+    End Enum
+
+    Sub Search(m As SearchMode)
+        Select Case m
+            Case &H0
+                'todo: 名称
+            Case &H1
+                'todo: 编号
+            Case &H2
+                'todo: 价格
+        End Select
+        '调试用代码，记得删除
+        MsgBox(m.ToString)
+    End Sub
+
+    Private Sub bt_Search_Click(sender As Object, e As EventArgs) Handles bt_Search.Click
+        Dim info As SearchMode = SearchMode.Number
+        If bt_Search.Text = "查询" Then
+            bt_Search.Text = "确定？"
+            bt_Search.ForeColor = Color.Red
+        Else
+            bt_Search.Text = "查询"
+            bt_Search.ForeColor = Color.Black
+            Try
+                If rb_NameSH.Checked Then
+                    info = SearchMode.Name
+                ElseIf rb_NumberSH.Checked Then
+                    info = SearchMode.Number
+                ElseIf rb_PriceSH.Checked Then
+                    info = SearchMode.Price
+                End If
+                lb_Search.ForeColor = Color.Black
+                lb_Search.Visible = True
+                Search(info)
+            Catch ex As Exception
+                lb_Search.ForeColor = Color.Red
+                lb_Search.Text = "查询失败"
+                MsgBox(ex.Message)
+            End Try
+        End If
+    End Sub
+
+    Private Sub bt_Search_Leave(sender As Object, e As EventArgs) Handles bt_Search.Leave
+        bt_Search.Text = "查询"
+        bt_Search.ForeColor = Color.Black
     End Sub
 
 End Class
