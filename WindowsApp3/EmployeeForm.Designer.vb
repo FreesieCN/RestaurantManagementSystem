@@ -48,14 +48,6 @@ Partial Class EmployeeForm
         Me.bt_Add = New System.Windows.Forms.Button()
         Me.bt_Quit = New System.Windows.Forms.Button()
         Me.雇员信息DataGridView = New System.Windows.Forms.DataGridView()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.tb_Age = New System.Windows.Forms.TextBox()
-        Me.LB_Sex = New System.Windows.Forms.ListBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.dt_Birth = New System.Windows.Forms.DateTimePicker()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.tb_Job = New System.Windows.Forms.TextBox()
         Me.名称DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.性别DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.年龄DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -64,6 +56,14 @@ Partial Class EmployeeForm
         Me.职位DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.雇员信息BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.RMS_DataSet = New WindowsApp3.RMS_DataSet()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.tb_Age = New System.Windows.Forms.TextBox()
+        Me.LB_Sex = New System.Windows.Forms.ListBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.dt_Birth = New System.Windows.Forms.DateTimePicker()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.tb_Job = New System.Windows.Forms.TextBox()
         Me.雇员信息TableAdapter = New WindowsApp3.RMS_DataSetTableAdapters.雇员信息TableAdapter()
         Me.TableAdapterManager = New WindowsApp3.RMS_DataSetTableAdapters.TableAdapterManager()
         Me.Panel1.SuspendLayout()
@@ -345,8 +345,54 @@ Partial Class EmployeeForm
         Me.雇员信息DataGridView.Name = "雇员信息DataGridView"
         Me.雇员信息DataGridView.RowTemplate.Height = 23
         Me.雇员信息DataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.雇员信息DataGridView.Size = New System.Drawing.Size(644, 248)
+        Me.雇员信息DataGridView.Size = New System.Drawing.Size(644, 249)
         Me.雇员信息DataGridView.TabIndex = 55
+        '
+        '名称DataGridViewTextBoxColumn
+        '
+        Me.名称DataGridViewTextBoxColumn.DataPropertyName = "名称"
+        Me.名称DataGridViewTextBoxColumn.HeaderText = "名称"
+        Me.名称DataGridViewTextBoxColumn.Name = "名称DataGridViewTextBoxColumn"
+        '
+        '性别DataGridViewTextBoxColumn
+        '
+        Me.性别DataGridViewTextBoxColumn.DataPropertyName = "性别"
+        Me.性别DataGridViewTextBoxColumn.HeaderText = "性别"
+        Me.性别DataGridViewTextBoxColumn.Name = "性别DataGridViewTextBoxColumn"
+        '
+        '年龄DataGridViewTextBoxColumn
+        '
+        Me.年龄DataGridViewTextBoxColumn.DataPropertyName = "年龄"
+        Me.年龄DataGridViewTextBoxColumn.HeaderText = "年龄"
+        Me.年龄DataGridViewTextBoxColumn.Name = "年龄DataGridViewTextBoxColumn"
+        '
+        '出生日期DataGridViewTextBoxColumn
+        '
+        Me.出生日期DataGridViewTextBoxColumn.DataPropertyName = "出生日期"
+        Me.出生日期DataGridViewTextBoxColumn.HeaderText = "出生日期"
+        Me.出生日期DataGridViewTextBoxColumn.Name = "出生日期DataGridViewTextBoxColumn"
+        '
+        '薪水DataGridViewTextBoxColumn
+        '
+        Me.薪水DataGridViewTextBoxColumn.DataPropertyName = "薪水"
+        Me.薪水DataGridViewTextBoxColumn.HeaderText = "薪水"
+        Me.薪水DataGridViewTextBoxColumn.Name = "薪水DataGridViewTextBoxColumn"
+        '
+        '职位DataGridViewTextBoxColumn
+        '
+        Me.职位DataGridViewTextBoxColumn.DataPropertyName = "职位"
+        Me.职位DataGridViewTextBoxColumn.HeaderText = "职位"
+        Me.职位DataGridViewTextBoxColumn.Name = "职位DataGridViewTextBoxColumn"
+        '
+        '雇员信息BindingSource
+        '
+        Me.雇员信息BindingSource.DataMember = "雇员信息"
+        Me.雇员信息BindingSource.DataSource = Me.RMS_DataSet
+        '
+        'RMS_DataSet
+        '
+        Me.RMS_DataSet.DataSetName = "RMS_DataSet"
+        Me.RMS_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Label1
         '
@@ -420,52 +466,6 @@ Partial Class EmployeeForm
         Me.tb_Job.Size = New System.Drawing.Size(245, 21)
         Me.tb_Job.TabIndex = 61
         '
-        '名称DataGridViewTextBoxColumn
-        '
-        Me.名称DataGridViewTextBoxColumn.DataPropertyName = "名称"
-        Me.名称DataGridViewTextBoxColumn.HeaderText = "名称"
-        Me.名称DataGridViewTextBoxColumn.Name = "名称DataGridViewTextBoxColumn"
-        '
-        '性别DataGridViewTextBoxColumn
-        '
-        Me.性别DataGridViewTextBoxColumn.DataPropertyName = "性别"
-        Me.性别DataGridViewTextBoxColumn.HeaderText = "性别"
-        Me.性别DataGridViewTextBoxColumn.Name = "性别DataGridViewTextBoxColumn"
-        '
-        '年龄DataGridViewTextBoxColumn
-        '
-        Me.年龄DataGridViewTextBoxColumn.DataPropertyName = "年龄"
-        Me.年龄DataGridViewTextBoxColumn.HeaderText = "年龄"
-        Me.年龄DataGridViewTextBoxColumn.Name = "年龄DataGridViewTextBoxColumn"
-        '
-        '出生日期DataGridViewTextBoxColumn
-        '
-        Me.出生日期DataGridViewTextBoxColumn.DataPropertyName = "出生日期"
-        Me.出生日期DataGridViewTextBoxColumn.HeaderText = "出生日期"
-        Me.出生日期DataGridViewTextBoxColumn.Name = "出生日期DataGridViewTextBoxColumn"
-        '
-        '薪水DataGridViewTextBoxColumn
-        '
-        Me.薪水DataGridViewTextBoxColumn.DataPropertyName = "薪水"
-        Me.薪水DataGridViewTextBoxColumn.HeaderText = "薪水"
-        Me.薪水DataGridViewTextBoxColumn.Name = "薪水DataGridViewTextBoxColumn"
-        '
-        '职位DataGridViewTextBoxColumn
-        '
-        Me.职位DataGridViewTextBoxColumn.DataPropertyName = "职位"
-        Me.职位DataGridViewTextBoxColumn.HeaderText = "职位"
-        Me.职位DataGridViewTextBoxColumn.Name = "职位DataGridViewTextBoxColumn"
-        '
-        '雇员信息BindingSource
-        '
-        Me.雇员信息BindingSource.DataMember = "雇员信息"
-        Me.雇员信息BindingSource.DataSource = Me.RMS_DataSet
-        '
-        'RMS_DataSet
-        '
-        Me.RMS_DataSet.DataSetName = "RMS_DataSet"
-        Me.RMS_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         '雇员信息TableAdapter
         '
         Me.雇员信息TableAdapter.ClearBeforeFill = True
@@ -484,7 +484,7 @@ Partial Class EmployeeForm
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.InactiveCaption
-        Me.ClientSize = New System.Drawing.Size(664, 532)
+        Me.ClientSize = New System.Drawing.Size(641, 513)
         Me.Controls.Add(Me.tb_Job)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.dt_Birth)

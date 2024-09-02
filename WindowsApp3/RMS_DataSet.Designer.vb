@@ -1348,15 +1348,17 @@ Partial Public Class RMS_DataSet
     Partial Public Class 会员信息DataTable
         Inherits Global.System.Data.TypedTableBase(Of 会员信息Row)
         
-        Private columnUserName As Global.System.Data.DataColumn
+        Private column姓名 As Global.System.Data.DataColumn
         
-        Private columnUserPwd As Global.System.Data.DataColumn
+        Private column密码 As Global.System.Data.DataColumn
         
-        Private columnUserSex As Global.System.Data.DataColumn
+        Private column性别 As Global.System.Data.DataColumn
         
-        Private columnUserVIPCheck As Global.System.Data.DataColumn
+        Private column是否为VIP As Global.System.Data.DataColumn
         
-        Private columnUserLoginTime As Global.System.Data.DataColumn
+        Private column注册时间 As Global.System.Data.DataColumn
+        
+        Private column身份信息 As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
@@ -1395,41 +1397,49 @@ Partial Public Class RMS_DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public ReadOnly Property UserNameColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property 姓名Column() As Global.System.Data.DataColumn
             Get
-                Return Me.columnUserName
+                Return Me.column姓名
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public ReadOnly Property UserPwdColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property 密码Column() As Global.System.Data.DataColumn
             Get
-                Return Me.columnUserPwd
+                Return Me.column密码
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public ReadOnly Property UserSexColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property 性别Column() As Global.System.Data.DataColumn
             Get
-                Return Me.columnUserSex
+                Return Me.column性别
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public ReadOnly Property UserVIPCheckColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property 是否为VIPColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnUserVIPCheck
+                Return Me.column是否为VIP
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public ReadOnly Property UserLoginTimeColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property 注册时间Column() As Global.System.Data.DataColumn
             Get
-                Return Me.columnUserLoginTime
+                Return Me.column注册时间
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property 身份信息Column() As Global.System.Data.DataColumn
+            Get
+                Return Me.column身份信息
             End Get
         End Property
         
@@ -1470,9 +1480,9 @@ Partial Public Class RMS_DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Overloads Function Add会员信息Row(ByVal UserName As String, ByVal UserPwd As String, ByVal UserSex As String, ByVal UserVIPCheck As Boolean, ByVal UserLoginTime As Date) As 会员信息Row
+        Public Overloads Function Add会员信息Row(ByVal 姓名 As String, ByVal 密码 As String, ByVal 性别 As String, ByVal 是否为VIP As Boolean, ByVal 注册时间 As Date, ByVal 身份信息 As String) As 会员信息Row
             Dim row会员信息Row As 会员信息Row = CType(Me.NewRow,会员信息Row)
-            Dim columnValuesArray() As Object = New Object() {UserName, UserPwd, UserSex, UserVIPCheck, UserLoginTime}
+            Dim columnValuesArray() As Object = New Object() {姓名, 密码, 性别, 是否为VIP, 注册时间, 身份信息}
             row会员信息Row.ItemArray = columnValuesArray
             Me.Rows.Add(row会员信息Row)
             Return row会员信息Row
@@ -1480,8 +1490,8 @@ Partial Public Class RMS_DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Function FindByUserName(ByVal UserName As String) As 会员信息Row
-            Return CType(Me.Rows.Find(New Object() {UserName}),会员信息Row)
+        Public Function FindBy姓名(ByVal 姓名 As String) As 会员信息Row
+            Return CType(Me.Rows.Find(New Object() {姓名}),会员信息Row)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1501,32 +1511,36 @@ Partial Public Class RMS_DataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Friend Sub InitVars()
-            Me.columnUserName = MyBase.Columns("UserName")
-            Me.columnUserPwd = MyBase.Columns("UserPwd")
-            Me.columnUserSex = MyBase.Columns("UserSex")
-            Me.columnUserVIPCheck = MyBase.Columns("UserVIPCheck")
-            Me.columnUserLoginTime = MyBase.Columns("UserLoginTime")
+            Me.column姓名 = MyBase.Columns("姓名")
+            Me.column密码 = MyBase.Columns("密码")
+            Me.column性别 = MyBase.Columns("性别")
+            Me.column是否为VIP = MyBase.Columns("是否为VIP")
+            Me.column注册时间 = MyBase.Columns("注册时间")
+            Me.column身份信息 = MyBase.Columns("身份信息")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Private Sub InitClass()
-            Me.columnUserName = New Global.System.Data.DataColumn("UserName", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnUserName)
-            Me.columnUserPwd = New Global.System.Data.DataColumn("UserPwd", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnUserPwd)
-            Me.columnUserSex = New Global.System.Data.DataColumn("UserSex", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnUserSex)
-            Me.columnUserVIPCheck = New Global.System.Data.DataColumn("UserVIPCheck", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnUserVIPCheck)
-            Me.columnUserLoginTime = New Global.System.Data.DataColumn("UserLoginTime", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnUserLoginTime)
-            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnUserName}, true))
-            Me.columnUserName.AllowDBNull = false
-            Me.columnUserName.Unique = true
-            Me.columnUserName.MaxLength = 255
-            Me.columnUserPwd.MaxLength = 255
-            Me.columnUserSex.MaxLength = 255
+            Me.column姓名 = New Global.System.Data.DataColumn("姓名", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.column姓名)
+            Me.column密码 = New Global.System.Data.DataColumn("密码", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.column密码)
+            Me.column性别 = New Global.System.Data.DataColumn("性别", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.column性别)
+            Me.column是否为VIP = New Global.System.Data.DataColumn("是否为VIP", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.column是否为VIP)
+            Me.column注册时间 = New Global.System.Data.DataColumn("注册时间", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.column注册时间)
+            Me.column身份信息 = New Global.System.Data.DataColumn("身份信息", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.column身份信息)
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.column姓名}, true))
+            Me.column姓名.AllowDBNull = false
+            Me.column姓名.Unique = true
+            Me.column姓名.MaxLength = 255
+            Me.column密码.MaxLength = 255
+            Me.column性别.MaxLength = 255
+            Me.column身份信息.MaxLength = 255
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2105,121 +2119,148 @@ Partial Public Class RMS_DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property UserName() As String
+        Public Property 姓名() As String
             Get
-                Return CType(Me(Me.table会员信息.UserNameColumn),String)
+                Return CType(Me(Me.table会员信息.姓名Column),String)
             End Get
             Set
-                Me(Me.table会员信息.UserNameColumn) = value
+                Me(Me.table会员信息.姓名Column) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property UserPwd() As String
+        Public Property 密码() As String
             Get
                 Try 
-                    Return CType(Me(Me.table会员信息.UserPwdColumn),String)
+                    Return CType(Me(Me.table会员信息.密码Column),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("表““会员信息””中列““UserPwd””的值为 DBNull。", e)
+                    Throw New Global.System.Data.StrongTypingException("表““会员信息””中列““密码””的值为 DBNull。", e)
                 End Try
             End Get
             Set
-                Me(Me.table会员信息.UserPwdColumn) = value
+                Me(Me.table会员信息.密码Column) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property UserSex() As String
+        Public Property 性别() As String
             Get
                 Try 
-                    Return CType(Me(Me.table会员信息.UserSexColumn),String)
+                    Return CType(Me(Me.table会员信息.性别Column),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("表““会员信息””中列““UserSex””的值为 DBNull。", e)
+                    Throw New Global.System.Data.StrongTypingException("表““会员信息””中列““性别””的值为 DBNull。", e)
                 End Try
             End Get
             Set
-                Me(Me.table会员信息.UserSexColumn) = value
+                Me(Me.table会员信息.性别Column) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property UserVIPCheck() As Boolean
+        Public Property 是否为VIP() As Boolean
             Get
                 Try 
-                    Return CType(Me(Me.table会员信息.UserVIPCheckColumn),Boolean)
+                    Return CType(Me(Me.table会员信息.是否为VIPColumn),Boolean)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("表““会员信息””中列““UserVIPCheck””的值为 DBNull。", e)
+                    Throw New Global.System.Data.StrongTypingException("表““会员信息””中列““是否为VIP””的值为 DBNull。", e)
                 End Try
             End Get
             Set
-                Me(Me.table会员信息.UserVIPCheckColumn) = value
+                Me(Me.table会员信息.是否为VIPColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property UserLoginTime() As Date
+        Public Property 注册时间() As Date
             Get
                 Try 
-                    Return CType(Me(Me.table会员信息.UserLoginTimeColumn),Date)
+                    Return CType(Me(Me.table会员信息.注册时间Column),Date)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("表““会员信息””中列““UserLoginTime””的值为 DBNull。", e)
+                    Throw New Global.System.Data.StrongTypingException("表““会员信息””中列““注册时间””的值为 DBNull。", e)
                 End Try
             End Get
             Set
-                Me(Me.table会员信息.UserLoginTimeColumn) = value
+                Me(Me.table会员信息.注册时间Column) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Function IsUserPwdNull() As Boolean
-            Return Me.IsNull(Me.table会员信息.UserPwdColumn)
+        Public Property 身份信息() As String
+            Get
+                Try 
+                    Return CType(Me(Me.table会员信息.身份信息Column),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("表““会员信息””中列““身份信息””的值为 DBNull。", e)
+                End Try
+            End Get
+            Set
+                Me(Me.table会员信息.身份信息Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function Is密码Null() As Boolean
+            Return Me.IsNull(Me.table会员信息.密码Column)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Sub SetUserPwdNull()
-            Me(Me.table会员信息.UserPwdColumn) = Global.System.Convert.DBNull
+        Public Sub Set密码Null()
+            Me(Me.table会员信息.密码Column) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Function IsUserSexNull() As Boolean
-            Return Me.IsNull(Me.table会员信息.UserSexColumn)
+        Public Function Is性别Null() As Boolean
+            Return Me.IsNull(Me.table会员信息.性别Column)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Sub SetUserSexNull()
-            Me(Me.table会员信息.UserSexColumn) = Global.System.Convert.DBNull
+        Public Sub Set性别Null()
+            Me(Me.table会员信息.性别Column) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Function IsUserVIPCheckNull() As Boolean
-            Return Me.IsNull(Me.table会员信息.UserVIPCheckColumn)
+        Public Function Is是否为VIPNull() As Boolean
+            Return Me.IsNull(Me.table会员信息.是否为VIPColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Sub SetUserVIPCheckNull()
-            Me(Me.table会员信息.UserVIPCheckColumn) = Global.System.Convert.DBNull
+        Public Sub Set是否为VIPNull()
+            Me(Me.table会员信息.是否为VIPColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Function IsUserLoginTimeNull() As Boolean
-            Return Me.IsNull(Me.table会员信息.UserLoginTimeColumn)
+        Public Function Is注册时间Null() As Boolean
+            Return Me.IsNull(Me.table会员信息.注册时间Column)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Sub SetUserLoginTimeNull()
-            Me(Me.table会员信息.UserLoginTimeColumn) = Global.System.Convert.DBNull
+        Public Sub Set注册时间Null()
+            Me(Me.table会员信息.注册时间Column) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function Is身份信息Null() As Boolean
+            Return Me.IsNull(Me.table会员信息.身份信息Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub Set身份信息Null()
+            Me(Me.table会员信息.身份信息Column) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -4171,60 +4212,67 @@ Namespace RMS_DataSetTableAdapters
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "会员信息"
-            tableMapping.ColumnMappings.Add("UserName", "UserName")
-            tableMapping.ColumnMappings.Add("UserPwd", "UserPwd")
-            tableMapping.ColumnMappings.Add("UserSex", "UserSex")
-            tableMapping.ColumnMappings.Add("UserVIPCheck", "UserVIPCheck")
-            tableMapping.ColumnMappings.Add("UserLoginTime", "UserLoginTime")
+            tableMapping.ColumnMappings.Add("姓名", "姓名")
+            tableMapping.ColumnMappings.Add("密码", "密码")
+            tableMapping.ColumnMappings.Add("性别", "性别")
+            tableMapping.ColumnMappings.Add("是否为VIP", "是否为VIP")
+            tableMapping.ColumnMappings.Add("注册时间", "注册时间")
+            tableMapping.ColumnMappings.Add("身份信息", "身份信息")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM `会员信息` WHERE ((`UserName` = ?) AND ((? = 1 AND `UserPwd` IS NULL) OR "& _ 
-                "(`UserPwd` = ?)) AND ((? = 1 AND `UserSex` IS NULL) OR (`UserSex` = ?)) AND ((? "& _ 
-                "= 1 AND `UserVIPCheck` IS NULL) OR (`UserVIPCheck` = ?)) AND ((? = 1 AND `UserLo"& _ 
-                "ginTime` IS NULL) OR (`UserLoginTime` = ?)))"
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM `会员信息` WHERE ((`姓名` = ?) AND ((? = 1 AND `密码` IS NULL) OR (`密码` = ?))"& _ 
+                " AND ((? = 1 AND `性别` IS NULL) OR (`性别` = ?)) AND ((? = 1 AND `是否为VIP` IS NULL) "& _ 
+                "OR (`是否为VIP` = ?)) AND ((? = 1 AND `注册时间` IS NULL) OR (`注册时间` = ?)) AND ((? = 1 "& _ 
+                "AND `身份信息` IS NULL) OR (`身份信息` = ?)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_UserName", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "UserName", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_UserPwd", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "UserPwd", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_UserPwd", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "UserPwd", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_UserSex", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "UserSex", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_UserSex", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "UserSex", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_UserVIPCheck", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "UserVIPCheck", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_UserVIPCheck", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "UserVIPCheck", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_UserLoginTime", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "UserLoginTime", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_UserLoginTime", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "UserLoginTime", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_姓名", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "姓名", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_密码", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "密码", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_密码", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "密码", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_性别", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "性别", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_性别", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "性别", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_是否为VIP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "是否为VIP", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_是否为VIP", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "是否为VIP", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_注册时间", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "注册时间", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_注册时间", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "注册时间", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_身份信息", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "身份信息", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_身份信息", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "身份信息", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO `会员信息` (`UserName`, `UserPwd`, `UserSex`, `UserVIPCheck`, `UserLoginT"& _ 
-                "ime`) VALUES (?, ?, ?, ?, ?)"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO `会员信息` (`姓名`, `密码`, `性别`, `是否为VIP`, `注册时间`, `身份信息`) VALUES (?, ?, ?, "& _ 
+                "?, ?, ?)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("UserName", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "UserName", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("UserPwd", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "UserPwd", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("UserSex", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "UserSex", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("UserVIPCheck", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "UserVIPCheck", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("UserLoginTime", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "UserLoginTime", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("姓名", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "姓名", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("密码", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "密码", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("性别", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "性别", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("是否为VIP", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "是否为VIP", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("注册时间", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "注册时间", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("身份信息", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "身份信息", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE `会员信息` SET `UserName` = ?, `UserPwd` = ?, `UserSex` = ?, `UserVIPCheck` = "& _ 
-                "?, `UserLoginTime` = ? WHERE ((`UserName` = ?) AND ((? = 1 AND `UserPwd` IS NULL"& _ 
-                ") OR (`UserPwd` = ?)) AND ((? = 1 AND `UserSex` IS NULL) OR (`UserSex` = ?)) AND"& _ 
-                " ((? = 1 AND `UserVIPCheck` IS NULL) OR (`UserVIPCheck` = ?)) AND ((? = 1 AND `U"& _ 
-                "serLoginTime` IS NULL) OR (`UserLoginTime` = ?)))"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE `会员信息` SET `姓名` = ?, `密码` = ?, `性别` = ?, `是否为VIP` = ?, `注册时间` = ?, `身份信息` "& _ 
+                "= ? WHERE ((`姓名` = ?) AND ((? = 1 AND `密码` IS NULL) OR (`密码` = ?)) AND ((? = 1 A"& _ 
+                "ND `性别` IS NULL) OR (`性别` = ?)) AND ((? = 1 AND `是否为VIP` IS NULL) OR (`是否为VIP` ="& _ 
+                " ?)) AND ((? = 1 AND `注册时间` IS NULL) OR (`注册时间` = ?)) AND ((? = 1 AND `身份信息` IS "& _ 
+                "NULL) OR (`身份信息` = ?)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("UserName", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "UserName", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("UserPwd", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "UserPwd", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("UserSex", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "UserSex", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("UserVIPCheck", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "UserVIPCheck", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("UserLoginTime", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "UserLoginTime", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_UserName", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "UserName", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_UserPwd", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "UserPwd", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_UserPwd", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "UserPwd", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_UserSex", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "UserSex", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_UserSex", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "UserSex", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_UserVIPCheck", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "UserVIPCheck", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_UserVIPCheck", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "UserVIPCheck", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_UserLoginTime", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "UserLoginTime", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_UserLoginTime", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "UserLoginTime", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("姓名", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "姓名", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("密码", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "密码", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("性别", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "性别", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("是否为VIP", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "是否为VIP", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("注册时间", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "注册时间", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("身份信息", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "身份信息", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_姓名", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "姓名", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_密码", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "密码", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_密码", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "密码", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_性别", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "性别", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_性别", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "性别", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_是否为VIP", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "是否为VIP", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_是否为VIP", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "是否为VIP", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_注册时间", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "注册时间", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_注册时间", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "注册时间", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_身份信息", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "身份信息", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_身份信息", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "身份信息", Global.System.Data.DataRowVersion.Original, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4240,7 +4288,7 @@ Namespace RMS_DataSetTableAdapters
             Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT UserName, UserPwd, UserSex, UserVIPCheck, UserLoginTime FROM 会员信息"
+            Me._commandCollection(0).CommandText = "SELECT 姓名, 密码, 性别, 是否为VIP, 注册时间, 身份信息 FROM 会员信息"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -4300,34 +4348,41 @@ Namespace RMS_DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_UserName As String, ByVal Original_UserPwd As String, ByVal Original_UserSex As String, ByVal Original_UserVIPCheck As Boolean, ByVal Original_UserLoginTime As Global.System.Nullable(Of Date)) As Integer
-            If (Original_UserName Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_UserName")
+        Public Overloads Overridable Function Delete(ByVal Original_姓名 As String, ByVal Original_密码 As String, ByVal Original_性别 As String, ByVal Original_是否为VIP As Boolean, ByVal Original_注册时间 As Global.System.Nullable(Of Date), ByVal Original_身份信息 As String) As Integer
+            If (Original_姓名 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Original_姓名")
             Else
-                Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_UserName,String)
+                Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_姓名,String)
             End If
-            If (Original_UserPwd Is Nothing) Then
+            If (Original_密码 Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(2).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_UserPwd,String)
+                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_密码,String)
             End If
-            If (Original_UserSex Is Nothing) Then
+            If (Original_性别 Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(3).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(4).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(3).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_UserSex,String)
+                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_性别,String)
             End If
             Me.Adapter.DeleteCommand.Parameters(5).Value = CType(0,Object)
-            Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_UserVIPCheck,Boolean)
-            If (Original_UserLoginTime.HasValue = true) Then
+            Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_是否为VIP,Boolean)
+            If (Original_注册时间.HasValue = true) Then
                 Me.Adapter.DeleteCommand.Parameters(7).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_UserLoginTime.Value,Date)
+                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_注册时间.Value,Date)
             Else
                 Me.Adapter.DeleteCommand.Parameters(7).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(8).Value = Global.System.DBNull.Value
+            End If
+            If (Original_身份信息 Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(10).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(Original_身份信息,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -4348,27 +4403,32 @@ Namespace RMS_DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal UserName As String, ByVal UserPwd As String, ByVal UserSex As String, ByVal UserVIPCheck As Boolean, ByVal UserLoginTime As Global.System.Nullable(Of Date)) As Integer
-            If (UserName Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("UserName")
+        Public Overloads Overridable Function Insert(ByVal 姓名 As String, ByVal 密码 As String, ByVal 性别 As String, ByVal 是否为VIP As Boolean, ByVal 注册时间 As Global.System.Nullable(Of Date), ByVal 身份信息 As String) As Integer
+            If (姓名 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("姓名")
             Else
-                Me.Adapter.InsertCommand.Parameters(0).Value = CType(UserName,String)
+                Me.Adapter.InsertCommand.Parameters(0).Value = CType(姓名,String)
             End If
-            If (UserPwd Is Nothing) Then
+            If (密码 Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(1).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(1).Value = CType(UserPwd,String)
+                Me.Adapter.InsertCommand.Parameters(1).Value = CType(密码,String)
             End If
-            If (UserSex Is Nothing) Then
+            If (性别 Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(2).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(2).Value = CType(UserSex,String)
+                Me.Adapter.InsertCommand.Parameters(2).Value = CType(性别,String)
             End If
-            Me.Adapter.InsertCommand.Parameters(3).Value = CType(UserVIPCheck,Boolean)
-            If (UserLoginTime.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(4).Value = CType(UserLoginTime.Value,Date)
+            Me.Adapter.InsertCommand.Parameters(3).Value = CType(是否为VIP,Boolean)
+            If (注册时间.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(4).Value = CType(注册时间.Value,Date)
             Else
                 Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
+            End If
+            If (身份信息 Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(5).Value = CType(身份信息,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -4389,55 +4449,67 @@ Namespace RMS_DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal UserName As String, ByVal UserPwd As String, ByVal UserSex As String, ByVal UserVIPCheck As Boolean, ByVal UserLoginTime As Global.System.Nullable(Of Date), ByVal Original_UserName As String, ByVal Original_UserPwd As String, ByVal Original_UserSex As String, ByVal Original_UserVIPCheck As Boolean, ByVal Original_UserLoginTime As Global.System.Nullable(Of Date)) As Integer
-            If (UserName Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("UserName")
+        Public Overloads Overridable Function Update(ByVal 姓名 As String, ByVal 密码 As String, ByVal 性别 As String, ByVal 是否为VIP As Boolean, ByVal 注册时间 As Global.System.Nullable(Of Date), ByVal 身份信息 As String, ByVal Original_姓名 As String, ByVal Original_密码 As String, ByVal Original_性别 As String, ByVal Original_是否为VIP As Boolean, ByVal Original_注册时间 As Global.System.Nullable(Of Date), ByVal Original_身份信息 As String) As Integer
+            If (姓名 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("姓名")
             Else
-                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(UserName,String)
+                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(姓名,String)
             End If
-            If (UserPwd Is Nothing) Then
+            If (密码 Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(UserPwd,String)
+                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(密码,String)
             End If
-            If (UserSex Is Nothing) Then
+            If (性别 Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(UserSex,String)
+                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(性别,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(3).Value = CType(UserVIPCheck,Boolean)
-            If (UserLoginTime.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(UserLoginTime.Value,Date)
+            Me.Adapter.UpdateCommand.Parameters(3).Value = CType(是否为VIP,Boolean)
+            If (注册时间.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(注册时间.Value,Date)
             Else
                 Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
             End If
-            If (Original_UserName Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_UserName")
+            If (身份信息 Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Original_UserName,String)
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(身份信息,String)
             End If
-            If (Original_UserPwd Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
+            If (Original_姓名 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Original_姓名")
             Else
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_UserPwd,String)
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_姓名,String)
             End If
-            If (Original_UserSex Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
+            If (Original_密码 Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_UserSex,String)
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_密码,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(10).Value = CType(0,Object)
-            Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_UserVIPCheck,Boolean)
-            If (Original_UserLoginTime.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(Original_UserLoginTime.Value,Date)
+            If (Original_性别 Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_性别,String)
+            End If
+            Me.Adapter.UpdateCommand.Parameters(11).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_是否为VIP,Boolean)
+            If (Original_注册时间.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Original_注册时间.Value,Date)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
+            End If
+            If (Original_身份信息 Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(16).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(Original_身份信息,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -4458,8 +4530,8 @@ Namespace RMS_DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal UserPwd As String, ByVal UserSex As String, ByVal UserVIPCheck As Boolean, ByVal UserLoginTime As Global.System.Nullable(Of Date), ByVal Original_UserName As String, ByVal Original_UserPwd As String, ByVal Original_UserSex As String, ByVal Original_UserVIPCheck As Boolean, ByVal Original_UserLoginTime As Global.System.Nullable(Of Date)) As Integer
-            Return Me.Update(Original_UserName, UserPwd, UserSex, UserVIPCheck, UserLoginTime, Original_UserName, Original_UserPwd, Original_UserSex, Original_UserVIPCheck, Original_UserLoginTime)
+        Public Overloads Overridable Function Update(ByVal 密码 As String, ByVal 性别 As String, ByVal 是否为VIP As Boolean, ByVal 注册时间 As Global.System.Nullable(Of Date), ByVal 身份信息 As String, ByVal Original_姓名 As String, ByVal Original_密码 As String, ByVal Original_性别 As String, ByVal Original_是否为VIP As Boolean, ByVal Original_注册时间 As Global.System.Nullable(Of Date), ByVal Original_身份信息 As String) As Integer
+            Return Me.Update(Original_姓名, 密码, 性别, 是否为VIP, 注册时间, 身份信息, Original_姓名, Original_密码, Original_性别, Original_是否为VIP, Original_注册时间, Original_身份信息)
         End Function
     End Class
     

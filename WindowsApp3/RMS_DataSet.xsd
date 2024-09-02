@@ -198,7 +198,7 @@
               <Mapping SourceColumn="职位" DataSetColumn="职位" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="RMS_ConnectString (MySettings)" DbObjectName="雇员信息" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByAge" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByAge" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="FillByAge">
+              <DbSource ConnectionRef="RMS_ConnectString (MySettings)" DbObjectName="雇员信息" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByAge" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByAge" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillByAge">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT 名称, 性别, 年龄, 出生日期, 薪水, 职位 FROM 雇员信息 where 年龄 = ?
@@ -209,7 +209,7 @@
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="RMS_ConnectString (MySettings)" DbObjectName="雇员信息" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByJob" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByJob" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy6" UserSourceName="FillByJob">
+              <DbSource ConnectionRef="RMS_ConnectString (MySettings)" DbObjectName="雇员信息" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByJob" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByJob" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillByJob">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT 名称, 性别, 年龄, 出生日期, 薪水, 职位 FROM 雇员信息 where 职位 = ?</CommandText>
@@ -219,7 +219,7 @@
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="RMS_ConnectString (MySettings)" DbObjectName="雇员信息" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByName" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByName" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillByName">
+              <DbSource ConnectionRef="RMS_ConnectString (MySettings)" DbObjectName="雇员信息" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByName" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByName" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="FillByName">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>SELECT 名称, 性别, 年龄, 出生日期, 薪水, 职位 FROM 雇员信息 Where 名称 =?</CommandText>
@@ -229,7 +229,7 @@
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="RMS_ConnectString (MySettings)" DbObjectName="雇员信息" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByPrice" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByPrice" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="FillByPrice">
+              <DbSource ConnectionRef="RMS_ConnectString (MySettings)" DbObjectName="雇员信息" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByPrice" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByPrice" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="FillByPrice">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT 名称, 性别, 年龄, 出生日期, 薪水, 职位 FROM 雇员信息 Where 薪水 &gt; ?</CommandText>
@@ -239,7 +239,7 @@
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="RMS_ConnectString (MySettings)" DbObjectName="雇员信息" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBySex" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBySex" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="FillBySex">
+              <DbSource ConnectionRef="RMS_ConnectString (MySettings)" DbObjectName="雇员信息" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBySex" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBySex" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="FillBySex">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT 名称, 性别, 年龄, 出生日期, 薪水, 职位 FROM 雇员信息 where 性别 = ?
@@ -250,7 +250,7 @@
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="RMS_ConnectString (MySettings)" DbObjectName="雇员信息" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByYear" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByYear" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="FillByYear">
+              <DbSource ConnectionRef="RMS_ConnectString (MySettings)" DbObjectName="雇员信息" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByYear" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByYear" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="FillByYear">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT   名称, 性别, 年龄, 出生日期, 薪水, 职位
@@ -262,7 +262,7 @@ WHERE   (出生日期 &gt; ?)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="RMS_ConnectString (MySettings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="Num" Modifier="Public" Name="Num" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="Num">
+              <DbSource ConnectionRef="RMS_ConnectString (MySettings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="Num" Modifier="Public" Name="Num" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy6" UserSourceName="Num">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT COUNT(*) FROM 雇员信息</CommandText>
@@ -360,67 +360,74 @@ WHERE   (用户名 = ?) AND (密码 = ?)</CommandText>
               <DbSource ConnectionRef="RMS_ConnectString (MySettings)" DbObjectName="会员信息" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM `会员信息` WHERE ((`UserName` = ?) AND ((? = 1 AND `UserPwd` IS NULL) OR (`UserPwd` = ?)) AND ((? = 1 AND `UserSex` IS NULL) OR (`UserSex` = ?)) AND ((? = 1 AND `UserVIPCheck` IS NULL) OR (`UserVIPCheck` = ?)) AND ((? = 1 AND `UserLoginTime` IS NULL) OR (`UserLoginTime` = ?)))</CommandText>
+                    <CommandText>DELETE FROM `会员信息` WHERE ((`姓名` = ?) AND ((? = 1 AND `密码` IS NULL) OR (`密码` = ?)) AND ((? = 1 AND `性别` IS NULL) OR (`性别` = ?)) AND ((? = 1 AND `是否为VIP` IS NULL) OR (`是否为VIP` = ?)) AND ((? = 1 AND `注册时间` IS NULL) OR (`注册时间` = ?)) AND ((? = 1 AND `身份信息` IS NULL) OR (`身份信息` = ?)))</CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_UserName" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="UserName" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_UserPwd" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="UserPwd" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_UserPwd" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="UserPwd" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_UserSex" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="UserSex" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_UserSex" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="UserSex" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_UserVIPCheck" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="UserVIPCheck" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="Original_UserVIPCheck" Precision="0" ProviderType="Boolean" Scale="0" Size="0" SourceColumn="UserVIPCheck" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_UserLoginTime" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="UserLoginTime" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="Original_UserLoginTime" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="UserLoginTime" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_姓名" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="姓名" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_密码" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="密码" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_密码" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="密码" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_性别" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="性别" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_性别" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="性别" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_是否为VIP" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="是否为VIP" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="Original_是否为VIP" Precision="0" ProviderType="Boolean" Scale="0" Size="0" SourceColumn="是否为VIP" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_注册时间" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="注册时间" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="Original_注册时间" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="注册时间" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_身份信息" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="身份信息" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_身份信息" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="身份信息" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </DeleteCommand>
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO `会员信息` (`UserName`, `UserPwd`, `UserSex`, `UserVIPCheck`, `UserLoginTime`) VALUES (?, ?, ?, ?, ?)</CommandText>
+                    <CommandText>INSERT INTO `会员信息` (`姓名`, `密码`, `性别`, `是否为VIP`, `注册时间`, `身份信息`) VALUES (?, ?, ?, ?, ?, ?)</CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="UserName" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="UserName" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="UserPwd" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="UserPwd" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="UserSex" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="UserSex" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="UserVIPCheck" Precision="0" ProviderType="Boolean" Scale="0" Size="0" SourceColumn="UserVIPCheck" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="UserLoginTime" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="UserLoginTime" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="姓名" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="姓名" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="密码" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="密码" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="性别" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="性别" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="是否为VIP" Precision="0" ProviderType="Boolean" Scale="0" Size="0" SourceColumn="是否为VIP" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="注册时间" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="注册时间" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="身份信息" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="身份信息" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT UserName, UserPwd, UserSex, UserVIPCheck, UserLoginTime FROM 会员信息</CommandText>
+                    <CommandText>SELECT 姓名, 密码, 性别, 是否为VIP, 注册时间, 身份信息 FROM 会员信息</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE `会员信息` SET `UserName` = ?, `UserPwd` = ?, `UserSex` = ?, `UserVIPCheck` = ?, `UserLoginTime` = ? WHERE ((`UserName` = ?) AND ((? = 1 AND `UserPwd` IS NULL) OR (`UserPwd` = ?)) AND ((? = 1 AND `UserSex` IS NULL) OR (`UserSex` = ?)) AND ((? = 1 AND `UserVIPCheck` IS NULL) OR (`UserVIPCheck` = ?)) AND ((? = 1 AND `UserLoginTime` IS NULL) OR (`UserLoginTime` = ?)))</CommandText>
+                    <CommandText>UPDATE `会员信息` SET `姓名` = ?, `密码` = ?, `性别` = ?, `是否为VIP` = ?, `注册时间` = ?, `身份信息` = ? WHERE ((`姓名` = ?) AND ((? = 1 AND `密码` IS NULL) OR (`密码` = ?)) AND ((? = 1 AND `性别` IS NULL) OR (`性别` = ?)) AND ((? = 1 AND `是否为VIP` IS NULL) OR (`是否为VIP` = ?)) AND ((? = 1 AND `注册时间` IS NULL) OR (`注册时间` = ?)) AND ((? = 1 AND `身份信息` IS NULL) OR (`身份信息` = ?)))</CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="UserName" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="UserName" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="UserPwd" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="UserPwd" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="UserSex" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="UserSex" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="UserVIPCheck" Precision="0" ProviderType="Boolean" Scale="0" Size="0" SourceColumn="UserVIPCheck" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="UserLoginTime" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="UserLoginTime" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_UserName" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="UserName" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_UserPwd" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="UserPwd" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_UserPwd" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="UserPwd" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_UserSex" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="UserSex" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_UserSex" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="UserSex" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_UserVIPCheck" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="UserVIPCheck" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="Original_UserVIPCheck" Precision="0" ProviderType="Boolean" Scale="0" Size="0" SourceColumn="UserVIPCheck" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_UserLoginTime" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="UserLoginTime" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="Original_UserLoginTime" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="UserLoginTime" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="姓名" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="姓名" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="密码" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="密码" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="性别" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="性别" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="是否为VIP" Precision="0" ProviderType="Boolean" Scale="0" Size="0" SourceColumn="是否为VIP" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="注册时间" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="注册时间" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="身份信息" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="身份信息" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_姓名" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="姓名" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_密码" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="密码" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_密码" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="密码" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_性别" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="性别" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_性别" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="性别" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_是否为VIP" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="是否为VIP" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="Original_是否为VIP" Precision="0" ProviderType="Boolean" Scale="0" Size="0" SourceColumn="是否为VIP" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_注册时间" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="注册时间" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="Original_注册时间" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="注册时间" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_身份信息" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="身份信息" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_身份信息" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="身份信息" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </UpdateCommand>
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="UserName" DataSetColumn="UserName" />
-              <Mapping SourceColumn="UserPwd" DataSetColumn="UserPwd" />
-              <Mapping SourceColumn="UserSex" DataSetColumn="UserSex" />
-              <Mapping SourceColumn="UserVIPCheck" DataSetColumn="UserVIPCheck" />
-              <Mapping SourceColumn="UserLoginTime" DataSetColumn="UserLoginTime" />
+              <Mapping SourceColumn="姓名" DataSetColumn="姓名" />
+              <Mapping SourceColumn="密码" DataSetColumn="密码" />
+              <Mapping SourceColumn="性别" DataSetColumn="性别" />
+              <Mapping SourceColumn="是否为VIP" DataSetColumn="是否为VIP" />
+              <Mapping SourceColumn="注册时间" DataSetColumn="注册时间" />
+              <Mapping SourceColumn="身份信息" DataSetColumn="身份信息" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -481,7 +488,7 @@ WHERE   (用户名 = ?) AND (密码 = ?)</CommandText>
               </xs:element>
               <xs:element name="出生日期" msprop:Generator_ColumnPropNameInTable="出生日期Column" msprop:Generator_ColumnPropNameInRow="出生日期" msprop:Generator_UserColumnName="出生日期" msprop:Generator_ColumnVarNameInTable="column出生日期" type="xs:dateTime" minOccurs="0" />
               <xs:element name="薪水" msprop:Generator_ColumnPropNameInTable="薪水Column" msprop:Generator_ColumnPropNameInRow="薪水" msprop:Generator_UserColumnName="薪水" msprop:Generator_ColumnVarNameInTable="column薪水" type="xs:decimal" minOccurs="0" />
-              <xs:element name="职位" msprop:Generator_ColumnPropNameInRow="职位" msprop:Generator_ColumnPropNameInTable="职位Column" msprop:Generator_ColumnVarNameInTable="column职位" msprop:Generator_UserColumnName="职位" minOccurs="0">
+              <xs:element name="职位" msprop:Generator_UserColumnName="职位" msprop:Generator_ColumnPropNameInTable="职位Column" msprop:Generator_ColumnPropNameInRow="职位" msprop:Generator_ColumnVarNameInTable="column职位" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
@@ -514,32 +521,39 @@ WHERE   (用户名 = ?) AND (密码 = ?)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="会员信息" msprop:Generator_RowEvHandlerName="会员信息RowChangeEventHandler" msprop:Generator_RowDeletedName="会员信息RowDeleted" msprop:Generator_RowDeletingName="会员信息RowDeleting" msprop:Generator_RowEvArgName="会员信息RowChangeEvent" msprop:Generator_TablePropName="会员信息" msprop:Generator_RowChangedName="会员信息RowChanged" msprop:Generator_UserTableName="会员信息" msprop:Generator_RowChangingName="会员信息RowChanging" msprop:Generator_RowClassName="会员信息Row" msprop:Generator_TableClassName="会员信息DataTable" msprop:Generator_TableVarName="table会员信息">
+        <xs:element name="会员信息" msprop:Generator_RowEvHandlerName="会员信息RowChangeEventHandler" msprop:Generator_RowDeletedName="会员信息RowDeleted" msprop:Generator_RowDeletingName="会员信息RowDeleting" msprop:Generator_RowEvArgName="会员信息RowChangeEvent" msprop:Generator_TablePropName="会员信息" msprop:Generator_RowChangedName="会员信息RowChanged" msprop:Generator_RowChangingName="会员信息RowChanging" msprop:Generator_TableClassName="会员信息DataTable" msprop:Generator_RowClassName="会员信息Row" msprop:Generator_TableVarName="table会员信息" msprop:Generator_UserTableName="会员信息">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="UserName" msprop:Generator_ColumnPropNameInTable="UserNameColumn" msprop:Generator_ColumnPropNameInRow="UserName" msprop:Generator_UserColumnName="UserName" msprop:Generator_ColumnVarNameInTable="columnUserName">
+              <xs:element name="姓名" msprop:Generator_ColumnPropNameInRow="姓名" msprop:Generator_ColumnPropNameInTable="姓名Column" msprop:Generator_ColumnVarNameInTable="column姓名" msprop:Generator_UserColumnName="姓名">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="UserPwd" msprop:Generator_ColumnPropNameInTable="UserPwdColumn" msprop:Generator_ColumnPropNameInRow="UserPwd" msprop:Generator_UserColumnName="UserPwd" msprop:Generator_ColumnVarNameInTable="columnUserPwd" minOccurs="0">
+              <xs:element name="密码" msprop:Generator_ColumnPropNameInRow="密码" msprop:Generator_ColumnPropNameInTable="密码Column" msprop:Generator_ColumnVarNameInTable="column密码" msprop:Generator_UserColumnName="密码" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="UserSex" msprop:Generator_ColumnPropNameInTable="UserSexColumn" msprop:Generator_ColumnPropNameInRow="UserSex" msprop:Generator_UserColumnName="UserSex" msprop:Generator_ColumnVarNameInTable="columnUserSex" minOccurs="0">
+              <xs:element name="性别" msprop:Generator_ColumnPropNameInRow="性别" msprop:Generator_ColumnPropNameInTable="性别Column" msprop:Generator_ColumnVarNameInTable="column性别" msprop:Generator_UserColumnName="性别" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="UserVIPCheck" msprop:Generator_ColumnPropNameInTable="UserVIPCheckColumn" msprop:Generator_ColumnPropNameInRow="UserVIPCheck" msprop:Generator_UserColumnName="UserVIPCheck" msprop:Generator_ColumnVarNameInTable="columnUserVIPCheck" type="xs:boolean" minOccurs="0" />
-              <xs:element name="UserLoginTime" msprop:Generator_ColumnPropNameInTable="UserLoginTimeColumn" msprop:Generator_ColumnPropNameInRow="UserLoginTime" msprop:Generator_UserColumnName="UserLoginTime" msprop:Generator_ColumnVarNameInTable="columnUserLoginTime" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="是否为VIP" msprop:Generator_ColumnPropNameInRow="是否为VIP" msprop:Generator_ColumnPropNameInTable="是否为VIPColumn" msprop:Generator_ColumnVarNameInTable="column是否为VIP" msprop:Generator_UserColumnName="是否为VIP" type="xs:boolean" minOccurs="0" />
+              <xs:element name="注册时间" msprop:Generator_ColumnPropNameInRow="注册时间" msprop:Generator_ColumnPropNameInTable="注册时间Column" msprop:Generator_ColumnVarNameInTable="column注册时间" msprop:Generator_UserColumnName="注册时间" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="身份信息" msprop:Generator_ColumnPropNameInRow="身份信息" msprop:Generator_ColumnPropNameInTable="身份信息Column" msprop:Generator_ColumnVarNameInTable="column身份信息" msprop:Generator_UserColumnName="身份信息" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -559,7 +573,7 @@ WHERE   (用户名 = ?) AND (密码 = ?)</CommandText>
     </xs:unique>
     <xs:unique name="会员信息_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:会员信息" />
-      <xs:field xpath="mstns:UserName" />
+      <xs:field xpath="mstns:姓名" />
     </xs:unique>
   </xs:element>
 </xs:schema>

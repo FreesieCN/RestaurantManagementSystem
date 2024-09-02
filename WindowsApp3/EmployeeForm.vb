@@ -5,6 +5,7 @@ Public Class EmployeeForm
     Private Sub EmployeeForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: 这行代码将数据加载到表“RMS_DataSet.雇员信息”中。您可以根据需要移动或移除它。
         Me.雇员信息TableAdapter.Fill(Me.RMS_DataSet.雇员信息)
+        rb_AgeSH.Checked = True
         tb_Search.Text = "输入日期时请按照'9999/99/99'的形式"
         tb_Search.ForeColor = Color.Gray
     End Sub
