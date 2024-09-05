@@ -30,17 +30,15 @@ Partial Class VIPForm
         Me.bt_Add = New System.Windows.Forms.Button()
         Me.bt_Quit = New System.Windows.Forms.Button()
         Me.Title = New System.Windows.Forms.Label()
-        Me.会员信息BindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.RMS_DataSet = New WindowsApp3.RMS_DataSet()
-        Me.会员信息TableAdapter = New WindowsApp3.RMS_DataSetTableAdapters.会员信息TableAdapter()
-        Me.TableAdapterManager = New WindowsApp3.RMS_DataSetTableAdapters.TableAdapterManager()
-        Me.雇员信息DataGridView = New System.Windows.Forms.DataGridView()
+        Me.会员信息DataGridView = New System.Windows.Forms.DataGridView()
         Me.姓名DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.密码DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.性别DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.是否为VIPDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.注册时间DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.身份信息DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.联系方式DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.会员信息BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.RMS_DataSet = New WindowsApp3.RMS_DataSet()
         Me.tb_Name = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.tb_PWD = New System.Windows.Forms.TextBox()
@@ -54,14 +52,20 @@ Partial Class VIPForm
         Me.Label5 = New System.Windows.Forms.Label()
         Me.tb_Search = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.rb_IsNotGivenSH = New System.Windows.Forms.RadioButton()
-        Me.rb_NumberSH = New System.Windows.Forms.RadioButton()
-        Me.rb_IsGivenSH = New System.Windows.Forms.RadioButton()
+        Me.rb_IsNotVIPSH = New System.Windows.Forms.RadioButton()
+        Me.rb_SexSH = New System.Windows.Forms.RadioButton()
+        Me.rb_IsVIPSH = New System.Windows.Forms.RadioButton()
         Me.rb_NameSH = New System.Windows.Forms.RadioButton()
         Me.lb_ErrorInfo = New System.Windows.Forms.Label()
+        Me.会员信息TableAdapter = New WindowsApp3.RMS_DataSetTableAdapters.会员信息TableAdapter()
+        Me.TableAdapterManager = New WindowsApp3.RMS_DataSetTableAdapters.TableAdapterManager()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.tb_TelePhone = New System.Windows.Forms.TextBox()
+        Me.lb_Num = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        CType(Me.会员信息DataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.会员信息BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RMS_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.雇员信息DataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -151,47 +155,24 @@ Partial Class VIPForm
         Me.Title.Text = "会员信息界面"
         Me.Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        '会员信息BindingSource
+        '会员信息DataGridView
         '
-        Me.会员信息BindingSource.DataMember = "会员信息"
-        Me.会员信息BindingSource.DataSource = Me.RMS_DataSet
-        '
-        'RMS_DataSet
-        '
-        Me.RMS_DataSet.DataSetName = "RMS_DataSet"
-        Me.RMS_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        '会员信息TableAdapter
-        '
-        Me.会员信息TableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.UpdateOrder = WindowsApp3.RMS_DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        Me.TableAdapterManager.会员信息TableAdapter = Me.会员信息TableAdapter
-        Me.TableAdapterManager.管理员信息TableAdapter = Nothing
-        Me.TableAdapterManager.菜单信息TableAdapter = Nothing
-        Me.TableAdapterManager.雇员信息TableAdapter = Nothing
-        '
-        '雇员信息DataGridView
-        '
-        Me.雇员信息DataGridView.AllowUserToAddRows = False
-        Me.雇员信息DataGridView.AllowUserToDeleteRows = False
-        Me.雇员信息DataGridView.AllowUserToResizeColumns = False
-        Me.雇员信息DataGridView.AllowUserToResizeRows = False
-        Me.雇员信息DataGridView.AutoGenerateColumns = False
-        Me.雇员信息DataGridView.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable
-        Me.雇员信息DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.雇员信息DataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.姓名DataGridViewTextBoxColumn, Me.密码DataGridViewTextBoxColumn, Me.性别DataGridViewTextBoxColumn, Me.是否为VIPDataGridViewCheckBoxColumn, Me.注册时间DataGridViewTextBoxColumn, Me.身份信息DataGridViewTextBoxColumn})
-        Me.雇员信息DataGridView.DataSource = Me.会员信息BindingSource
-        Me.雇员信息DataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
-        Me.雇员信息DataGridView.Location = New System.Drawing.Point(0, 262)
-        Me.雇员信息DataGridView.Name = "雇员信息DataGridView"
-        Me.雇员信息DataGridView.RowTemplate.Height = 23
-        Me.雇员信息DataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.雇员信息DataGridView.Size = New System.Drawing.Size(644, 249)
-        Me.雇员信息DataGridView.TabIndex = 63
+        Me.会员信息DataGridView.AllowUserToAddRows = False
+        Me.会员信息DataGridView.AllowUserToDeleteRows = False
+        Me.会员信息DataGridView.AllowUserToResizeColumns = False
+        Me.会员信息DataGridView.AllowUserToResizeRows = False
+        Me.会员信息DataGridView.AutoGenerateColumns = False
+        Me.会员信息DataGridView.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable
+        Me.会员信息DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.会员信息DataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.姓名DataGridViewTextBoxColumn, Me.密码DataGridViewTextBoxColumn, Me.性别DataGridViewTextBoxColumn, Me.是否为VIPDataGridViewCheckBoxColumn, Me.注册时间DataGridViewTextBoxColumn, Me.联系方式DataGridViewTextBoxColumn})
+        Me.会员信息DataGridView.DataSource = Me.会员信息BindingSource
+        Me.会员信息DataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
+        Me.会员信息DataGridView.Location = New System.Drawing.Point(0, 262)
+        Me.会员信息DataGridView.Name = "会员信息DataGridView"
+        Me.会员信息DataGridView.RowTemplate.Height = 23
+        Me.会员信息DataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.会员信息DataGridView.Size = New System.Drawing.Size(644, 249)
+        Me.会员信息DataGridView.TabIndex = 63
         '
         '姓名DataGridViewTextBoxColumn
         '
@@ -223,11 +204,21 @@ Partial Class VIPForm
         Me.注册时间DataGridViewTextBoxColumn.HeaderText = "注册时间"
         Me.注册时间DataGridViewTextBoxColumn.Name = "注册时间DataGridViewTextBoxColumn"
         '
-        '身份信息DataGridViewTextBoxColumn
+        '联系方式DataGridViewTextBoxColumn
         '
-        Me.身份信息DataGridViewTextBoxColumn.DataPropertyName = "身份信息"
-        Me.身份信息DataGridViewTextBoxColumn.HeaderText = "身份信息"
-        Me.身份信息DataGridViewTextBoxColumn.Name = "身份信息DataGridViewTextBoxColumn"
+        Me.联系方式DataGridViewTextBoxColumn.DataPropertyName = "联系方式"
+        Me.联系方式DataGridViewTextBoxColumn.HeaderText = "联系方式"
+        Me.联系方式DataGridViewTextBoxColumn.Name = "联系方式DataGridViewTextBoxColumn"
+        '
+        '会员信息BindingSource
+        '
+        Me.会员信息BindingSource.DataMember = "会员信息"
+        Me.会员信息BindingSource.DataSource = Me.RMS_DataSet
+        '
+        'RMS_DataSet
+        '
+        Me.RMS_DataSet.DataSetName = "RMS_DataSet"
+        Me.RMS_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'tb_Name
         '
@@ -240,7 +231,7 @@ Partial Class VIPForm
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("宋体", 12.0!)
-        Me.Label2.Location = New System.Drawing.Point(16, 78)
+        Me.Label2.Location = New System.Drawing.Point(16, 79)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(55, 16)
         Me.Label2.TabIndex = 65
@@ -258,7 +249,7 @@ Partial Class VIPForm
         Me.lb_PWD.AutoSize = True
         Me.lb_PWD.Font = New System.Drawing.Font("宋体", 12.0!)
         Me.lb_PWD.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.lb_PWD.Location = New System.Drawing.Point(16, 105)
+        Me.lb_PWD.Location = New System.Drawing.Point(16, 107)
         Me.lb_PWD.Name = "lb_PWD"
         Me.lb_PWD.Size = New System.Drawing.Size(55, 16)
         Me.lb_PWD.TabIndex = 67
@@ -289,7 +280,7 @@ Partial Class VIPForm
         '
         Me.Panel2.Controls.Add(Me.rb_isVIP)
         Me.Panel2.Controls.Add(Me.rb_isnotVIP)
-        Me.Panel2.Location = New System.Drawing.Point(77, 132)
+        Me.Panel2.Location = New System.Drawing.Point(76, 156)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(213, 20)
         Me.Panel2.TabIndex = 70
@@ -319,7 +310,7 @@ Partial Class VIPForm
         'lb_Search
         '
         Me.lb_Search.Font = New System.Drawing.Font("宋体", 12.0!)
-        Me.lb_Search.Location = New System.Drawing.Point(149, 155)
+        Me.lb_Search.Location = New System.Drawing.Point(148, 179)
         Me.lb_Search.Name = "lb_Search"
         Me.lb_Search.Size = New System.Drawing.Size(141, 19)
         Me.lb_Search.TabIndex = 73
@@ -331,7 +322,7 @@ Partial Class VIPForm
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("宋体", 12.0!)
-        Me.Label5.Location = New System.Drawing.Point(20, 177)
+        Me.Label5.Location = New System.Drawing.Point(19, 201)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(71, 16)
         Me.Label5.TabIndex = 72
@@ -339,54 +330,54 @@ Partial Class VIPForm
         '
         'tb_Search
         '
-        Me.tb_Search.Location = New System.Drawing.Point(97, 177)
+        Me.tb_Search.Location = New System.Drawing.Point(96, 201)
         Me.tb_Search.Name = "tb_Search"
         Me.tb_Search.Size = New System.Drawing.Size(194, 21)
         Me.tb_Search.TabIndex = 71
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.rb_IsNotGivenSH)
-        Me.Panel1.Controls.Add(Me.rb_NumberSH)
-        Me.Panel1.Controls.Add(Me.rb_IsGivenSH)
+        Me.Panel1.Controls.Add(Me.rb_IsNotVIPSH)
+        Me.Panel1.Controls.Add(Me.rb_SexSH)
+        Me.Panel1.Controls.Add(Me.rb_IsVIPSH)
         Me.Panel1.Controls.Add(Me.rb_NameSH)
-        Me.Panel1.Location = New System.Drawing.Point(23, 204)
+        Me.Panel1.Location = New System.Drawing.Point(22, 228)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(372, 19)
         Me.Panel1.TabIndex = 74
         '
-        'rb_IsNotGivenSH
+        'rb_IsNotVIPSH
         '
-        Me.rb_IsNotGivenSH.AutoSize = True
-        Me.rb_IsNotGivenSH.Location = New System.Drawing.Point(270, 3)
-        Me.rb_IsNotGivenSH.Name = "rb_IsNotGivenSH"
-        Me.rb_IsNotGivenSH.Size = New System.Drawing.Size(95, 16)
-        Me.rb_IsNotGivenSH.TabIndex = 30
-        Me.rb_IsNotGivenSH.TabStop = True
-        Me.rb_IsNotGivenSH.Text = "查询不可供应"
-        Me.rb_IsNotGivenSH.UseVisualStyleBackColor = True
+        Me.rb_IsNotVIPSH.AutoSize = True
+        Me.rb_IsNotVIPSH.Location = New System.Drawing.Point(270, 3)
+        Me.rb_IsNotVIPSH.Name = "rb_IsNotVIPSH"
+        Me.rb_IsNotVIPSH.Size = New System.Drawing.Size(101, 16)
+        Me.rb_IsNotVIPSH.TabIndex = 30
+        Me.rb_IsNotVIPSH.TabStop = True
+        Me.rb_IsNotVIPSH.Text = "查询非VIP用户"
+        Me.rb_IsNotVIPSH.UseVisualStyleBackColor = True
         '
-        'rb_NumberSH
+        'rb_SexSH
         '
-        Me.rb_NumberSH.AutoSize = True
-        Me.rb_NumberSH.Location = New System.Drawing.Point(3, 3)
-        Me.rb_NumberSH.Name = "rb_NumberSH"
-        Me.rb_NumberSH.Size = New System.Drawing.Size(83, 16)
-        Me.rb_NumberSH.TabIndex = 27
-        Me.rb_NumberSH.TabStop = True
-        Me.rb_NumberSH.Text = "按编号查询"
-        Me.rb_NumberSH.UseVisualStyleBackColor = True
+        Me.rb_SexSH.AutoSize = True
+        Me.rb_SexSH.Location = New System.Drawing.Point(3, 3)
+        Me.rb_SexSH.Name = "rb_SexSH"
+        Me.rb_SexSH.Size = New System.Drawing.Size(83, 16)
+        Me.rb_SexSH.TabIndex = 27
+        Me.rb_SexSH.TabStop = True
+        Me.rb_SexSH.Text = "按编号查询"
+        Me.rb_SexSH.UseVisualStyleBackColor = True
         '
-        'rb_IsGivenSH
+        'rb_IsVIPSH
         '
-        Me.rb_IsGivenSH.AutoSize = True
-        Me.rb_IsGivenSH.Location = New System.Drawing.Point(181, 3)
-        Me.rb_IsGivenSH.Name = "rb_IsGivenSH"
-        Me.rb_IsGivenSH.Size = New System.Drawing.Size(83, 16)
-        Me.rb_IsGivenSH.TabIndex = 29
-        Me.rb_IsGivenSH.TabStop = True
-        Me.rb_IsGivenSH.Text = "查询可供应"
-        Me.rb_IsGivenSH.UseVisualStyleBackColor = True
+        Me.rb_IsVIPSH.AutoSize = True
+        Me.rb_IsVIPSH.Location = New System.Drawing.Point(181, 3)
+        Me.rb_IsVIPSH.Name = "rb_IsVIPSH"
+        Me.rb_IsVIPSH.Size = New System.Drawing.Size(89, 16)
+        Me.rb_IsVIPSH.TabIndex = 29
+        Me.rb_IsVIPSH.TabStop = True
+        Me.rb_IsVIPSH.Text = "查询VIP用户"
+        Me.rb_IsVIPSH.UseVisualStyleBackColor = True
         '
         'rb_NameSH
         '
@@ -404,12 +395,62 @@ Partial Class VIPForm
         Me.lb_ErrorInfo.AutoSize = True
         Me.lb_ErrorInfo.Font = New System.Drawing.Font("黑体", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.lb_ErrorInfo.ForeColor = System.Drawing.Color.Red
-        Me.lb_ErrorInfo.Location = New System.Drawing.Point(24, 160)
+        Me.lb_ErrorInfo.Location = New System.Drawing.Point(23, 184)
         Me.lb_ErrorInfo.Name = "lb_ErrorInfo"
         Me.lb_ErrorInfo.Size = New System.Drawing.Size(65, 12)
         Me.lb_ErrorInfo.TabIndex = 50
         Me.lb_ErrorInfo.Text = "Error_Info"
         Me.lb_ErrorInfo.Visible = False
+        '
+        '会员信息TableAdapter
+        '
+        Me.会员信息TableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.UpdateOrder = WindowsApp3.RMS_DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.会员信息TableAdapter = Me.会员信息TableAdapter
+        Me.TableAdapterManager.管理员信息TableAdapter = Nothing
+        Me.TableAdapterManager.菜单信息TableAdapter = Nothing
+        Me.TableAdapterManager.雇员信息TableAdapter = Nothing
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("宋体", 12.0!)
+        Me.Label1.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label1.Location = New System.Drawing.Point(16, 135)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(87, 16)
+        Me.Label1.TabIndex = 75
+        Me.Label1.Text = "联系方式："
+        '
+        'tb_TelePhone
+        '
+        Me.tb_TelePhone.Location = New System.Drawing.Point(96, 132)
+        Me.tb_TelePhone.Name = "tb_TelePhone"
+        Me.tb_TelePhone.Size = New System.Drawing.Size(194, 21)
+        Me.tb_TelePhone.TabIndex = 76
+        '
+        'lb_Num
+        '
+        Me.lb_Num.AutoSize = True
+        Me.lb_Num.Font = New System.Drawing.Font("宋体", 12.0!)
+        Me.lb_Num.Location = New System.Drawing.Point(527, 229)
+        Me.lb_Num.Name = "lb_Num"
+        Me.lb_Num.Size = New System.Drawing.Size(15, 16)
+        Me.lb_Num.TabIndex = 78
+        Me.lb_Num.Text = "1"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(505, 214)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(77, 12)
+        Me.Label4.TabIndex = 77
+        Me.Label4.Text = "总雇员数量："
         '
         'VIPForm
         '
@@ -417,6 +458,10 @@ Partial Class VIPForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.ClientSize = New System.Drawing.Size(644, 507)
+        Me.Controls.Add(Me.lb_Num)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.tb_TelePhone)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lb_ErrorInfo)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.lb_Search)
@@ -429,7 +474,7 @@ Partial Class VIPForm
         Me.Controls.Add(Me.lb_PWD)
         Me.Controls.Add(Me.tb_Name)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.雇员信息DataGridView)
+        Me.Controls.Add(Me.会员信息DataGridView)
         Me.Controls.Add(Me.bt_Reset)
         Me.Controls.Add(Me.bt_Edit)
         Me.Controls.Add(Me.bt_Delete)
@@ -440,9 +485,9 @@ Partial Class VIPForm
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "VIPForm"
         Me.Text = "VIPForm"
+        CType(Me.会员信息DataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.会员信息BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RMS_DataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.雇员信息DataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.Panel1.ResumeLayout(False)
@@ -463,13 +508,7 @@ Partial Class VIPForm
     Friend WithEvents 会员信息BindingSource As BindingSource
     Friend WithEvents 会员信息TableAdapter As RMS_DataSetTableAdapters.会员信息TableAdapter
     Friend WithEvents TableAdapterManager As RMS_DataSetTableAdapters.TableAdapterManager
-    Friend WithEvents 雇员信息DataGridView As DataGridView
-    Friend WithEvents 姓名DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents 密码DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents 性别DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents 是否为VIPDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
-    Friend WithEvents 注册时间DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents 身份信息DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents 会员信息DataGridView As DataGridView
     Friend WithEvents tb_Name As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents tb_PWD As TextBox
@@ -483,9 +522,19 @@ Partial Class VIPForm
     Friend WithEvents Label5 As Label
     Friend WithEvents tb_Search As TextBox
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents rb_IsNotGivenSH As RadioButton
-    Friend WithEvents rb_NumberSH As RadioButton
-    Friend WithEvents rb_IsGivenSH As RadioButton
+    Friend WithEvents rb_IsNotVIPSH As RadioButton
+    Friend WithEvents rb_SexSH As RadioButton
+    Friend WithEvents rb_IsVIPSH As RadioButton
     Friend WithEvents rb_NameSH As RadioButton
     Friend WithEvents lb_ErrorInfo As Label
+    Friend WithEvents 姓名DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents 密码DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents 性别DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents 是否为VIPDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
+    Friend WithEvents 注册时间DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents 联系方式DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents Label1 As Label
+    Friend WithEvents tb_TelePhone As TextBox
+    Friend WithEvents lb_Num As Label
+    Friend WithEvents Label4 As Label
 End Class

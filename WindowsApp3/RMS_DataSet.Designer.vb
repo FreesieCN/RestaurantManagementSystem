@@ -1358,7 +1358,7 @@ Partial Public Class RMS_DataSet
         
         Private column注册时间 As Global.System.Data.DataColumn
         
-        Private column身份信息 As Global.System.Data.DataColumn
+        Private column联系方式 As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
@@ -1437,9 +1437,9 @@ Partial Public Class RMS_DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public ReadOnly Property 身份信息Column() As Global.System.Data.DataColumn
+        Public ReadOnly Property 联系方式Column() As Global.System.Data.DataColumn
             Get
-                Return Me.column身份信息
+                Return Me.column联系方式
             End Get
         End Property
         
@@ -1480,9 +1480,9 @@ Partial Public Class RMS_DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Overloads Function Add会员信息Row(ByVal 姓名 As String, ByVal 密码 As String, ByVal 性别 As String, ByVal 是否为VIP As Boolean, ByVal 注册时间 As Date, ByVal 身份信息 As String) As 会员信息Row
+        Public Overloads Function Add会员信息Row(ByVal 姓名 As String, ByVal 密码 As String, ByVal 性别 As String, ByVal 是否为VIP As Boolean, ByVal 注册时间 As Date, ByVal 联系方式 As String) As 会员信息Row
             Dim row会员信息Row As 会员信息Row = CType(Me.NewRow,会员信息Row)
-            Dim columnValuesArray() As Object = New Object() {姓名, 密码, 性别, 是否为VIP, 注册时间, 身份信息}
+            Dim columnValuesArray() As Object = New Object() {姓名, 密码, 性别, 是否为VIP, 注册时间, 联系方式}
             row会员信息Row.ItemArray = columnValuesArray
             Me.Rows.Add(row会员信息Row)
             Return row会员信息Row
@@ -1516,7 +1516,7 @@ Partial Public Class RMS_DataSet
             Me.column性别 = MyBase.Columns("性别")
             Me.column是否为VIP = MyBase.Columns("是否为VIP")
             Me.column注册时间 = MyBase.Columns("注册时间")
-            Me.column身份信息 = MyBase.Columns("身份信息")
+            Me.column联系方式 = MyBase.Columns("联系方式")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1532,15 +1532,15 @@ Partial Public Class RMS_DataSet
             MyBase.Columns.Add(Me.column是否为VIP)
             Me.column注册时间 = New Global.System.Data.DataColumn("注册时间", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.column注册时间)
-            Me.column身份信息 = New Global.System.Data.DataColumn("身份信息", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.column身份信息)
+            Me.column联系方式 = New Global.System.Data.DataColumn("联系方式", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.column联系方式)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.column姓名}, true))
             Me.column姓名.AllowDBNull = false
             Me.column姓名.Unique = true
             Me.column姓名.MaxLength = 255
             Me.column密码.MaxLength = 255
             Me.column性别.MaxLength = 255
-            Me.column身份信息.MaxLength = 255
+            Me.column联系方式.MaxLength = 255
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2190,16 +2190,16 @@ Partial Public Class RMS_DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property 身份信息() As String
+        Public Property 联系方式() As String
             Get
                 Try 
-                    Return CType(Me(Me.table会员信息.身份信息Column),String)
+                    Return CType(Me(Me.table会员信息.联系方式Column),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("表““会员信息””中列““身份信息””的值为 DBNull。", e)
+                    Throw New Global.System.Data.StrongTypingException("表““会员信息””中列““联系方式””的值为 DBNull。", e)
                 End Try
             End Get
             Set
-                Me(Me.table会员信息.身份信息Column) = value
+                Me(Me.table会员信息.联系方式Column) = value
             End Set
         End Property
         
@@ -2253,14 +2253,14 @@ Partial Public Class RMS_DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Function Is身份信息Null() As Boolean
-            Return Me.IsNull(Me.table会员信息.身份信息Column)
+        Public Function Is联系方式Null() As Boolean
+            Return Me.IsNull(Me.table会员信息.联系方式Column)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Sub Set身份信息Null()
-            Me(Me.table会员信息.身份信息Column) = Global.System.Convert.DBNull
+        Public Sub Set联系方式Null()
+            Me(Me.table会员信息.联系方式Column) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -4217,14 +4217,14 @@ Namespace RMS_DataSetTableAdapters
             tableMapping.ColumnMappings.Add("性别", "性别")
             tableMapping.ColumnMappings.Add("是否为VIP", "是否为VIP")
             tableMapping.ColumnMappings.Add("注册时间", "注册时间")
-            tableMapping.ColumnMappings.Add("身份信息", "身份信息")
+            tableMapping.ColumnMappings.Add("联系方式", "联系方式")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
             Me._adapter.DeleteCommand.CommandText = "DELETE FROM `会员信息` WHERE ((`姓名` = ?) AND ((? = 1 AND `密码` IS NULL) OR (`密码` = ?))"& _ 
                 " AND ((? = 1 AND `性别` IS NULL) OR (`性别` = ?)) AND ((? = 1 AND `是否为VIP` IS NULL) "& _ 
                 "OR (`是否为VIP` = ?)) AND ((? = 1 AND `注册时间` IS NULL) OR (`注册时间` = ?)) AND ((? = 1 "& _ 
-                "AND `身份信息` IS NULL) OR (`身份信息` = ?)))"
+                "AND `联系方式` IS NULL) OR (`联系方式` = ?)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_姓名", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "姓名", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_密码", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "密码", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -4235,11 +4235,11 @@ Namespace RMS_DataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_是否为VIP", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "是否为VIP", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_注册时间", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "注册时间", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_注册时间", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "注册时间", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_身份信息", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "身份信息", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_身份信息", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "身份信息", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_联系方式", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "联系方式", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_联系方式", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "联系方式", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO `会员信息` (`姓名`, `密码`, `性别`, `是否为VIP`, `注册时间`, `身份信息`) VALUES (?, ?, ?, "& _ 
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO `会员信息` (`姓名`, `密码`, `性别`, `是否为VIP`, `注册时间`, `联系方式`) VALUES (?, ?, ?, "& _ 
                 "?, ?, ?)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("姓名", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "姓名", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -4247,21 +4247,21 @@ Namespace RMS_DataSetTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("性别", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "性别", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("是否为VIP", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "是否为VIP", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("注册时间", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "注册时间", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("身份信息", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "身份信息", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("联系方式", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "联系方式", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE `会员信息` SET `姓名` = ?, `密码` = ?, `性别` = ?, `是否为VIP` = ?, `注册时间` = ?, `身份信息` "& _ 
+            Me._adapter.UpdateCommand.CommandText = "UPDATE `会员信息` SET `姓名` = ?, `密码` = ?, `性别` = ?, `是否为VIP` = ?, `注册时间` = ?, `联系方式` "& _ 
                 "= ? WHERE ((`姓名` = ?) AND ((? = 1 AND `密码` IS NULL) OR (`密码` = ?)) AND ((? = 1 A"& _ 
                 "ND `性别` IS NULL) OR (`性别` = ?)) AND ((? = 1 AND `是否为VIP` IS NULL) OR (`是否为VIP` ="& _ 
-                " ?)) AND ((? = 1 AND `注册时间` IS NULL) OR (`注册时间` = ?)) AND ((? = 1 AND `身份信息` IS "& _ 
-                "NULL) OR (`身份信息` = ?)))"
+                " ?)) AND ((? = 1 AND `注册时间` IS NULL) OR (`注册时间` = ?)) AND ((? = 1 AND `联系方式` IS "& _ 
+                "NULL) OR (`联系方式` = ?)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("姓名", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "姓名", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("密码", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "密码", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("性别", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "性别", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("是否为VIP", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "是否为VIP", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("注册时间", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "注册时间", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("身份信息", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "身份信息", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("联系方式", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "联系方式", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_姓名", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "姓名", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_密码", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "密码", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_密码", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "密码", Global.System.Data.DataRowVersion.Original, false, Nothing))
@@ -4271,8 +4271,8 @@ Namespace RMS_DataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_是否为VIP", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "是否为VIP", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_注册时间", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "注册时间", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_注册时间", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "注册时间", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_身份信息", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "身份信息", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_身份信息", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "身份信息", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_联系方式", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "联系方式", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_联系方式", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "联系方式", Global.System.Data.DataRowVersion.Original, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4285,11 +4285,33 @@ Namespace RMS_DataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
+            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(5) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT 姓名, 密码, 性别, 是否为VIP, 注册时间, 身份信息 FROM 会员信息"
+            Me._commandCollection(0).CommandText = "SELECT 姓名, 密码, 性别, 是否为VIP, 注册时间, 联系方式 FROM 会员信息"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1) = New Global.System.Data.OleDb.OleDbCommand()
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "SELECT 姓名, 密码, 性别, 是否为VIP, 注册时间, 联系方式 FROM 会员信息 Where 是否为VIP = False"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(2) = New Global.System.Data.OleDb.OleDbCommand()
+            Me._commandCollection(2).Connection = Me.Connection
+            Me._commandCollection(2).CommandText = "SELECT 姓名, 密码, 性别, 是否为VIP, 注册时间, 联系方式 FROM 会员信息 Where 是否为VIP = True"
+            Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(3) = New Global.System.Data.OleDb.OleDbCommand()
+            Me._commandCollection(3).Connection = Me.Connection
+            Me._commandCollection(3).CommandText = "SELECT 姓名, 密码, 性别, 是否为VIP, 注册时间, 联系方式 FROM 会员信息 where 姓名 = ?"
+            Me._commandCollection(3).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("姓名", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "姓名", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(4) = New Global.System.Data.OleDb.OleDbCommand()
+            Me._commandCollection(4).Connection = Me.Connection
+            Me._commandCollection(4).CommandText = "SELECT 姓名, 密码, 性别, 是否为VIP, 注册时间, 联系方式 FROM 会员信息 where 性别 = ?"
+            Me._commandCollection(4).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("性别", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "性别", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(5) = New Global.System.Data.OleDb.OleDbCommand()
+            Me._commandCollection(5).Connection = Me.Connection
+            Me._commandCollection(5).CommandText = "SELECT COUNT(*) FROM 会员信息"
+            Me._commandCollection(5).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4314,6 +4336,68 @@ Namespace RMS_DataSetTableAdapters
             Dim dataTable As RMS_DataSet.会员信息DataTable = New RMS_DataSet.会员信息DataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function FillByisnotVIP(ByVal dataTable As RMS_DataSet.会员信息DataTable) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function FillByisVIP(ByVal dataTable As RMS_DataSet.会员信息DataTable) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(2)
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function FillByName(ByVal dataTable As RMS_DataSet.会员信息DataTable, ByVal 姓名 As String) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(3)
+            If (姓名 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("姓名")
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(姓名,String)
+            End If
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function FillBySex(ByVal dataTable As RMS_DataSet.会员信息DataTable, ByVal 性别 As String) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(4)
+            If (性别 Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(性别,String)
+            End If
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4348,7 +4432,7 @@ Namespace RMS_DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_姓名 As String, ByVal Original_密码 As String, ByVal Original_性别 As String, ByVal Original_是否为VIP As Boolean, ByVal Original_注册时间 As Global.System.Nullable(Of Date), ByVal Original_身份信息 As String) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_姓名 As String, ByVal Original_密码 As String, ByVal Original_性别 As String, ByVal Original_是否为VIP As Boolean, ByVal Original_注册时间 As Global.System.Nullable(Of Date), ByVal Original_联系方式 As String) As Integer
             If (Original_姓名 Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_姓名")
             Else
@@ -4377,12 +4461,12 @@ Namespace RMS_DataSetTableAdapters
                 Me.Adapter.DeleteCommand.Parameters(7).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(8).Value = Global.System.DBNull.Value
             End If
-            If (Original_身份信息 Is Nothing) Then
+            If (Original_联系方式 Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(9).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(10).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(9).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(Original_身份信息,String)
+                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(Original_联系方式,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -4403,7 +4487,7 @@ Namespace RMS_DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal 姓名 As String, ByVal 密码 As String, ByVal 性别 As String, ByVal 是否为VIP As Boolean, ByVal 注册时间 As Global.System.Nullable(Of Date), ByVal 身份信息 As String) As Integer
+        Public Overloads Overridable Function Insert(ByVal 姓名 As String, ByVal 密码 As String, ByVal 性别 As String, ByVal 是否为VIP As Boolean, ByVal 注册时间 As Global.System.Nullable(Of Date), ByVal 联系方式 As String) As Integer
             If (姓名 Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("姓名")
             Else
@@ -4425,10 +4509,10 @@ Namespace RMS_DataSetTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
             End If
-            If (身份信息 Is Nothing) Then
+            If (联系方式 Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(5).Value = CType(身份信息,String)
+                Me.Adapter.InsertCommand.Parameters(5).Value = CType(联系方式,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -4449,7 +4533,7 @@ Namespace RMS_DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal 姓名 As String, ByVal 密码 As String, ByVal 性别 As String, ByVal 是否为VIP As Boolean, ByVal 注册时间 As Global.System.Nullable(Of Date), ByVal 身份信息 As String, ByVal Original_姓名 As String, ByVal Original_密码 As String, ByVal Original_性别 As String, ByVal Original_是否为VIP As Boolean, ByVal Original_注册时间 As Global.System.Nullable(Of Date), ByVal Original_身份信息 As String) As Integer
+        Public Overloads Overridable Function Update(ByVal 姓名 As String, ByVal 密码 As String, ByVal 性别 As String, ByVal 是否为VIP As Boolean, ByVal 注册时间 As Global.System.Nullable(Of Date), ByVal 联系方式 As String, ByVal Original_姓名 As String, ByVal Original_密码 As String, ByVal Original_性别 As String, ByVal Original_是否为VIP As Boolean, ByVal Original_注册时间 As Global.System.Nullable(Of Date), ByVal Original_联系方式 As String) As Integer
             If (姓名 Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("姓名")
             Else
@@ -4471,10 +4555,10 @@ Namespace RMS_DataSetTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
             End If
-            If (身份信息 Is Nothing) Then
+            If (联系方式 Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(身份信息,String)
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(联系方式,String)
             End If
             If (Original_姓名 Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_姓名")
@@ -4504,12 +4588,12 @@ Namespace RMS_DataSetTableAdapters
                 Me.Adapter.UpdateCommand.Parameters(13).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
             End If
-            If (Original_身份信息 Is Nothing) Then
+            If (Original_联系方式 Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(15).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(16).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(15).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(Original_身份信息,String)
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(Original_联系方式,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -4530,8 +4614,34 @@ Namespace RMS_DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal 密码 As String, ByVal 性别 As String, ByVal 是否为VIP As Boolean, ByVal 注册时间 As Global.System.Nullable(Of Date), ByVal 身份信息 As String, ByVal Original_姓名 As String, ByVal Original_密码 As String, ByVal Original_性别 As String, ByVal Original_是否为VIP As Boolean, ByVal Original_注册时间 As Global.System.Nullable(Of Date), ByVal Original_身份信息 As String) As Integer
-            Return Me.Update(Original_姓名, 密码, 性别, 是否为VIP, 注册时间, 身份信息, Original_姓名, Original_密码, Original_性别, Original_是否为VIP, Original_注册时间, Original_身份信息)
+        Public Overloads Overridable Function Update(ByVal 密码 As String, ByVal 性别 As String, ByVal 是否为VIP As Boolean, ByVal 注册时间 As Global.System.Nullable(Of Date), ByVal 联系方式 As String, ByVal Original_姓名 As String, ByVal Original_密码 As String, ByVal Original_性别 As String, ByVal Original_是否为VIP As Boolean, ByVal Original_注册时间 As Global.System.Nullable(Of Date), ByVal Original_联系方式 As String) As Integer
+            Return Me.Update(Original_姓名, 密码, 性别, 是否为VIP, 注册时间, 联系方式, Original_姓名, Original_密码, Original_性别, Original_是否为VIP, Original_注册时间, Original_联系方式)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Num() As Object
+            Dim command As Global.System.Data.OleDb.OleDbCommand = Me.CommandCollection(5)
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open
+            End If
+            Dim returnValue As Object
+            Try 
+                returnValue = command.ExecuteScalar
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close
+                End If
+            End Try
+            If ((returnValue Is Nothing)  _
+                        OrElse (returnValue.GetType Is GetType(Global.System.DBNull))) Then
+                Return Nothing
+            Else
+                Return CType(returnValue,Object)
+            End If
         End Function
     End Class
     
