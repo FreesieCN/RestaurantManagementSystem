@@ -450,7 +450,7 @@ Partial Class VIPForm
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(77, 12)
         Me.Label4.TabIndex = 77
-        Me.Label4.Text = "总雇员数量："
+        Me.Label4.Text = "总会员数量："
         '
         'VIPForm
         '

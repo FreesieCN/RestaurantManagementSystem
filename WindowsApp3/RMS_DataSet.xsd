@@ -430,7 +430,7 @@ WHERE   (用户名 = ?) AND (密码 = ?)</CommandText>
               <Mapping SourceColumn="联系方式" DataSetColumn="联系方式" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="RMS_ConnectString (MySettings)" DbObjectName="会员信息" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByisnotVIP" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByisnotVIP" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="FillByisnotVIP">
+              <DbSource ConnectionRef="RMS_ConnectString (MySettings)" DbObjectName="会员信息" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByisnotVIP" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByisnotVIP" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillByisnotVIP">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT 姓名, 密码, 性别, 是否为VIP, 注册时间, 联系方式 FROM 会员信息 Where 是否为VIP = False
@@ -439,7 +439,7 @@ WHERE   (用户名 = ?) AND (密码 = ?)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="RMS_ConnectString (MySettings)" DbObjectName="会员信息" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByisVIP" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByisVIP" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="FillByisVIP">
+              <DbSource ConnectionRef="RMS_ConnectString (MySettings)" DbObjectName="会员信息" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByisVIP" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByisVIP" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillByisVIP">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT 姓名, 密码, 性别, 是否为VIP, 注册时间, 联系方式 FROM 会员信息 Where 是否为VIP = True</CommandText>
@@ -447,7 +447,7 @@ WHERE   (用户名 = ?) AND (密码 = ?)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="RMS_ConnectString (MySettings)" DbObjectName="会员信息" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByName" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByName" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillByName">
+              <DbSource ConnectionRef="RMS_ConnectString (MySettings)" DbObjectName="会员信息" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByName" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByName" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="FillByName">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT 姓名, 密码, 性别, 是否为VIP, 注册时间, 联系方式 FROM 会员信息 where 姓名 = ?</CommandText>
@@ -457,7 +457,7 @@ WHERE   (用户名 = ?) AND (密码 = ?)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="RMS_ConnectString (MySettings)" DbObjectName="会员信息" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBySex" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy2" GeneratorSourceName="FillBySex" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="FillBySex">
+              <DbSource ConnectionRef="RMS_ConnectString (MySettings)" DbObjectName="会员信息" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBySex" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy2" GeneratorSourceName="FillBySex" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="FillBySex">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT 姓名, 密码, 性别, 是否为VIP, 注册时间, 联系方式 FROM 会员信息 where 性别 = ?</CommandText>
@@ -467,7 +467,7 @@ WHERE   (用户名 = ?) AND (密码 = ?)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="RMS_ConnectString (MySettings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="Num" Modifier="Public" Name="Num" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="Num">
+              <DbSource ConnectionRef="RMS_ConnectString (MySettings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="Num" Modifier="Public" Name="Num" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="Num">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT COUNT(*) FROM 会员信息</CommandText>
@@ -567,33 +567,33 @@ WHERE   (用户名 = ?) AND (密码 = ?)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="会员信息" msprop:Generator_RowClassName="会员信息Row" msprop:Generator_RowEvHandlerName="会员信息RowChangeEventHandler" msprop:Generator_RowDeletedName="会员信息RowDeleted" msprop:Generator_RowDeletingName="会员信息RowDeleting" msprop:Generator_RowEvArgName="会员信息RowChangeEvent" msprop:Generator_TablePropName="会员信息" msprop:Generator_RowChangedName="会员信息RowChanged" msprop:Generator_UserTableName="会员信息" msprop:Generator_RowChangingName="会员信息RowChanging" msprop:Generator_TableClassName="会员信息DataTable" msprop:Generator_TableVarName="table会员信息">
+        <xs:element name="会员信息" msprop:Generator_RowEvHandlerName="会员信息RowChangeEventHandler" msprop:Generator_RowDeletedName="会员信息RowDeleted" msprop:Generator_RowDeletingName="会员信息RowDeleting" msprop:Generator_RowEvArgName="会员信息RowChangeEvent" msprop:Generator_TablePropName="会员信息" msprop:Generator_RowChangedName="会员信息RowChanged" msprop:Generator_UserTableName="会员信息" msprop:Generator_RowChangingName="会员信息RowChanging" msprop:Generator_RowClassName="会员信息Row" msprop:Generator_TableClassName="会员信息DataTable" msprop:Generator_TableVarName="table会员信息">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="姓名" msprop:Generator_UserColumnName="姓名" msprop:Generator_ColumnPropNameInTable="姓名Column" msprop:Generator_ColumnPropNameInRow="姓名" msprop:Generator_ColumnVarNameInTable="column姓名">
+              <xs:element name="姓名" msprop:Generator_ColumnPropNameInTable="姓名Column" msprop:Generator_ColumnPropNameInRow="姓名" msprop:Generator_UserColumnName="姓名" msprop:Generator_ColumnVarNameInTable="column姓名">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="密码" msprop:Generator_UserColumnName="密码" msprop:Generator_ColumnPropNameInTable="密码Column" msprop:Generator_ColumnPropNameInRow="密码" msprop:Generator_ColumnVarNameInTable="column密码" minOccurs="0">
+              <xs:element name="密码" msprop:Generator_ColumnPropNameInTable="密码Column" msprop:Generator_ColumnPropNameInRow="密码" msprop:Generator_UserColumnName="密码" msprop:Generator_ColumnVarNameInTable="column密码" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="性别" msprop:Generator_UserColumnName="性别" msprop:Generator_ColumnPropNameInTable="性别Column" msprop:Generator_ColumnPropNameInRow="性别" msprop:Generator_ColumnVarNameInTable="column性别" minOccurs="0">
+              <xs:element name="性别" msprop:Generator_ColumnPropNameInTable="性别Column" msprop:Generator_ColumnPropNameInRow="性别" msprop:Generator_UserColumnName="性别" msprop:Generator_ColumnVarNameInTable="column性别" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="是否为VIP" msprop:Generator_UserColumnName="是否为VIP" msprop:Generator_ColumnPropNameInTable="是否为VIPColumn" msprop:Generator_ColumnPropNameInRow="是否为VIP" msprop:Generator_ColumnVarNameInTable="column是否为VIP" type="xs:boolean" minOccurs="0" />
-              <xs:element name="注册时间" msprop:Generator_UserColumnName="注册时间" msprop:Generator_ColumnPropNameInTable="注册时间Column" msprop:Generator_ColumnPropNameInRow="注册时间" msprop:Generator_ColumnVarNameInTable="column注册时间" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="联系方式" msprop:Generator_ColumnPropNameInRow="联系方式" msprop:Generator_ColumnPropNameInTable="联系方式Column" msprop:Generator_ColumnVarNameInTable="column联系方式" msprop:Generator_UserColumnName="联系方式" minOccurs="0">
+              <xs:element name="是否为VIP" msprop:Generator_ColumnPropNameInTable="是否为VIPColumn" msprop:Generator_ColumnPropNameInRow="是否为VIP" msprop:Generator_UserColumnName="是否为VIP" msprop:Generator_ColumnVarNameInTable="column是否为VIP" type="xs:boolean" minOccurs="0" />
+              <xs:element name="注册时间" msprop:Generator_ColumnPropNameInTable="注册时间Column" msprop:Generator_ColumnPropNameInRow="注册时间" msprop:Generator_UserColumnName="注册时间" msprop:Generator_ColumnVarNameInTable="column注册时间" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="联系方式" msprop:Generator_UserColumnName="联系方式" msprop:Generator_ColumnPropNameInTable="联系方式Column" msprop:Generator_ColumnPropNameInRow="联系方式" msprop:Generator_ColumnVarNameInTable="column联系方式" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
