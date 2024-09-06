@@ -85,11 +85,6 @@
         End If
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Me.Hide()
-        ListForm.Show()
-    End Sub
-
     Private Sub bt_Quit_Leave(sender As Object, e As EventArgs) Handles bt_Quit.Leave
         If bt_Quit.Text = "确定退出？" Then
             bt_Quit.Text = "退出"
